@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+  <Description about="urn:mozilla:install-manifest">
+    <em:type>4</em:type> <!-- 4 : Theme -->
+    <em:id>elementary@elementaryos.org</em:id>
+    <em:version>1.0</em:version>
+    <em:name>Elementary</em:name>
+    <em:description>Thunderbird for elementaryOS</em:description>
+    <em:creator>Alex Little</em:creator>
+    <em:contributor>Based on the Elementary GTK theme.</em:contributor>
+
+    <!-- Thunderbird -->
+    <em:targetApplication>
+      <Description>
+        <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
+        <em:minVersion>17</em:minVersion>
+        <em:maxVersion>17.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+
+   <!--Lightning -->
+   <em:targetApplication>
+      <Description>
+        <em:id>{e2fda1a4-762b-4020-b5ad-a41df1933103}</em:id>
+        <em:minVersion>1.0</em:minVersion>
+        <em:maxVersion>1.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+
+    <!-- Front End Integration Hooks (used by Theme Manager)-->
+    <em:internalName>elementary</em:internalName>
+  </Description>
+</RDF>

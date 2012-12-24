@@ -1,0 +1,352 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* ===== threadPane.css ==============================================
+  == Styles for the thread pane in the Messenger 3-pane window.
+  ======================================================================= */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* ::::: thread decoration ::::: */
+
+treechildren::-moz-tree-cell-text(read) {
+  font-weight: normal;
+}
+
+treechildren::-moz-tree-cell-text(unread) {
+  font-weight: bold;
+}
+
+treechildren::-moz-tree-cell-text(imapdeleted) {
+  text-decoration: line-through;
+}
+
+/* on a collapsed thread, if the top level message is read, but the thread has
+ * unread children, underline the text.  4.x mac did this, very slick 
+ */
+treechildren::-moz-tree-cell-text(container, closed, hasUnread, read) {
+  text-decoration: underline;
+}
+
+/* ::::: priority colors ::::: */
+/****
+ ****  Priority colors currently not being used at the moment.  It has been
+ ****  disabled so as to not conflict with the labels color feature.
+ ****
+treechildren::-moz-tree-cell-text(priorityCol, priority-highest) {
+  color: red;
+}
+
+treechildren::-moz-tree-cell-text(priorityCol, priority-high) {
+  color: rgb(128, 0, 0);
+}
+
+treechildren::-moz-tree-cell-text(priorityCol, priority-lowest) {
+  color: rgb(170, 170, 170);
+}
+
+treechildren::-moz-tree-cell-text(priorityCol, priority-low) {
+  color: rgb(85, 85, 85);
+}
+
+treechildren::-moz-tree-cell-text(priorityCol, selected) {
+  color: -moz-DialogText;
+}
+
+treechildren::-moz-tree-cell-text(priorityCol, selected, focus) {
+  color: HighlightText;
+}
+ ****/
+
+/* ::::: message icons ::::: */
+
+/* ::::: message column icons ::::: */
+
+/* ..... thread column ..... */
+
+.threadColumnHeader {
+  list-style-image: url("chrome://messenger/skin/icons/threadcol-unthreaded.png");
+}
+
+.threadColumnHeader[sortDirection="ascending"]  {
+  list-style-image: url("chrome://messenger/skin/icons/threadcol-threaded.png");
+}
+
+.threadColumnHeader[sortDirection="descending"] {
+  list-style-image: url("chrome://messenger/skin/icons/threadcol-threaded.png");
+}
+
+treechildren::-moz-tree-image(threadCol, container) {
+  list-style-image: url("chrome://messenger/skin/icons/thread-closed.png");
+}
+
+treechildren::-moz-tree-image(threadCol, container, hasUnread) {
+  list-style-image: url("chrome://messenger/skin/icons/thread-new-closed.png");
+}
+
+/* ..... read column ..... */
+
+.readColumnHeader {
+  list-style-image: url("chrome://messenger/skin/icons/readcol.png");
+}
+
+treechildren::-moz-tree-image(unreadButtonColHeader) {
+  list-style-image: url("chrome://messenger/skin/icons/dot.png");
+}
+
+treechildren::-moz-tree-image(unreadButtonColHeader, unread) {
+  list-style-image: url("chrome://messenger/skin/icons/readcol.png");
+}
+
+/* ..... attachment column ..... */
+
+.attachmentColumnHeader {
+  list-style-image: url("chrome://messenger/skin/icons/attachment-col.png");
+}
+
+treechildren::-moz-tree-image(attachmentCol, attach) {
+  list-style-image: url("chrome://messenger/skin/icons/attachment.png");
+}
+
+treechildren::-moz-tree-image(attachmentCol, attach, focus, selected) {
+  list-style-image: url("chrome://messenger/skin/icons/attachment-selected.png");
+}
+
+/* ..... flag column ..... */
+
+.flagColumnHeader {
+  list-style-image: url("chrome://messenger/skin/icons/flagcol.png");
+}
+
+treechildren::-moz-tree-image(flaggedCol) {
+  list-style-image: url("chrome://messenger/skin/icons/dot.png");
+}
+
+treechildren::-moz-tree-image(flaggedCol, flagged) {
+  list-style-image: url("chrome://messenger/skin/icons/flagcol.png");
+}
+
+/* ..... junkStatus column ..... */
+
+.junkStatusHeader {
+  list-style-image: url("chrome://messenger/skin/icons/folder-junk.png");
+  padding-top: 0px;
+  padding-bottom: 0px;
+  -moz-padding-start: 0px;
+  -moz-padding-end: 4px;
+}
+
+/* "unknown" now looks like "not junk".  see bug #182386 */
+treechildren::-moz-tree-image(junkStatusCol) {
+  list-style-image: url("chrome://messenger/skin/icons/dot.png");
+  -moz-padding-start: 0px;
+  -moz-padding-end: 4px;
+}
+
+treechildren::-moz-tree-image(junkStatusCol, junk) {
+  list-style-image: url("chrome://messenger/skin/icons/junkcol.png");
+}
+
+treechildren::-moz-tree-image(junkStatusCol, notjunk) {
+  list-style-image: url("chrome://messenger/skin/icons/dot.png");
+  -moz-padding-start: 0px;
+  -moz-padding-end: 4px;
+}
+
+/* ..... subject column, tab and menuitem icons ..... */
+
+.icon-holder[type="message"],
+treechildren::-moz-tree-image(subjectCol) {
+  list-style-image: url("chrome://messenger/skin/icons/message-mail.png");
+}
+
+treechildren::-moz-tree-image(subjectCol) {
+  -moz-margin-end: 2px;
+}
+
+treechildren::-moz-tree-image(subjectCol, new) {
+  list-style-image: url("chrome://messenger/skin/icons/message-mail-new.png");
+}
+
+treechildren::-moz-tree-image(subjectCol, forwarded) {
+  list-style-image: url("chrome://messenger/skin/icons/message-mail-fwd.png");
+}
+
+treechildren::-moz-tree-image(subjectCol, replied) {
+  list-style-image: url("chrome://messenger/skin/icons/message-mail-reply.png");
+}
+
+treechildren::-moz-tree-image(subjectCol, forwarded, replied) {
+  list-style-image: url("chrome://messenger/skin/icons/message-mail-fwd-reply.png");
+}
+
+.icon-holder[type="message"][Attachment="true"],
+tree[noattachcol="true"] > treechildren::-moz-tree-image(subjectCol, attach) {
+  list-style-image: url("chrome://messenger/skin/icons/message-mail-attach.png");
+}
+
+tree[noattachcol="true"] > treechildren::-moz-tree-image(subjectCol, attach, forwarded) {
+  list-style-image: url("chrome://messenger/skin/icons/message-mail-attach-fwd.png");
+}
+
+tree[noattachcol="true"] > treechildren::-moz-tree-image(subjectCol, attach, replied) {
+  list-style-image: url("chrome://messenger/skin/icons/message-mail-attach-reply.png");
+}
+
+tree[noattachcol="true"] > treechildren::-moz-tree-image(subjectCol, attach, forwarded, replied) {
+  list-style-image: url("chrome://messenger/skin/icons/message-mail-attach-fwd-reply.png");
+}
+
+.icon-holder[type="message"][IMAPDeleted="true"],
+treechildren::-moz-tree-image(subjectCol, imapdeleted) {
+  list-style-image: url("chrome://messenger/skin/icons/message-mail-imapdelete.png");
+}
+
+.icon-holder[type="message"][Offline="true"],
+treechildren::-moz-tree-image(subjectCol, offline) {
+  list-style-image: url("chrome://messenger/skin/icons/message-mail-offl.png");
+}
+
+treechildren::-moz-tree-image(subjectCol, new, offline) {
+  list-style-image: url("chrome://messenger/skin/icons/message-mail-new-offl.png");
+}
+
+treechildren::-moz-tree-image(subjectCol, forwarded, offline) {
+  list-style-image: url("chrome://messenger/skin/icons/message-mail-fwd-offl.png");
+}
+
+treechildren::-moz-tree-image(subjectCol, offline, replied) {
+  list-style-image: url("chrome://messenger/skin/icons/message-mail-offl-reply.png");
+}
+
+treechildren::-moz-tree-image(subjectCol, forwarded, offline, replied) {
+  list-style-image: url("chrome://messenger/skin/icons/message-mail-fwd-offl-reply.png");
+}
+
+.icon-holder[type="message"][Attachment="true"][Offline="true"],
+tree[noattachcol="true"] > treechildren::-moz-tree-image(subjectCol, attach, offline) {
+  list-style-image: url("chrome://messenger/skin/icons/message-mail-attach-offl.png");
+}
+
+tree[noattachcol="true"] > treechildren::-moz-tree-image(subjectCol, attach, forwarded, offline) {
+  list-style-image: url("chrome://messenger/skin/icons/message-mail-attach-fwd-offl.png");
+}
+
+tree[noattachcol="true"] > treechildren::-moz-tree-image(subjectCol, attach, offline, replied) {
+  list-style-image: url("chrome://messenger/skin/icons/message-mail-attach-offl-reply.png");
+}
+
+tree[noattachcol="true"] > treechildren::-moz-tree-image(subjectCol, attach, forwarded, offline, replied) {
+  list-style-image: url("chrome://messenger/skin/icons/message-mail-attach-fwd-offl-reply.png");
+}
+
+.icon-holder[type="message"][IMAPDeleted="true"][Offline="true"],
+treechildren::-moz-tree-image(subjectCol, imapdeleted, offline) {
+  list-style-image: url("chrome://messenger/skin/icons/message-mail-delete-offl.png");
+}
+
+.icon-holder[type="message"][MessageType="rss"],
+.icon-holder[type="message"][MessageType="nntp"],
+treechildren::-moz-tree-image(subjectCol, rss),
+treechildren::-moz-tree-image(subjectCol, news) {
+  list-style-image: url("chrome://messenger/skin/icons/message-news.png");
+}
+
+treechildren::-moz-tree-image(subjectCol, rss, ignoreSubthread),
+treechildren::-moz-tree-image(subjectCol, news, ignoreSubthread) {
+  list-style-image: url("chrome://messenger/skin/icons/message-news-kill.png");
+}
+
+.icon-holder[type="message"][MessageType="rss"][Attachment="true"],
+.icon-holder[type="message"][MessageType="nntp"][Attachment="true"],
+tree[noattachcol="true"] > treechildren::-moz-tree-image(subjectCol, rss, attach),
+tree[noattachcol="true"] > treechildren::-moz-tree-image(subjectCol, news, attach) {
+  list-style-image: url("chrome://messenger/skin/icons/message-news-attach.png");
+}
+
+tree[noattachcol="true"] > treechildren::-moz-tree-image(subjectCol, rss, attach, ignoreSubthread),
+tree[noattachcol="true"] > treechildren::-moz-tree-image(subjectCol, news, attach, ignoreSubthread) {
+  list-style-image: url("chrome://messenger/skin/icons/message-news-attach-kill.png");
+}
+
+.icon-holder[type="message"][MessageType="rss"][Attachment="true"][Offline="true"],
+.icon-holder[type="message"][MessageType="nntp"][Attachment="true"][Offline="true"],
+tree[noattachcol="true"] > treechildren::-moz-tree-image(subjectCol, rss, attach, offline),
+tree[noattachcol="true"] > treechildren::-moz-tree-image(subjectCol, news, attach, offline) {
+  list-style-image: url("chrome://messenger/skin/icons/message-news-attach-offl.png");
+}
+
+tree[noattachcol="true"] > treechildren::-moz-tree-image(subjectCol, rss, attach, offline, ignoreSubthread),
+tree[noattachcol="true"] > treechildren::-moz-tree-image(subjectCol, news, attach, offline, ignoreSubthread) {
+  list-style-image: url("chrome://messenger/skin/icons/message-news-attach-kill-offl.png");
+}
+
+treechildren::-moz-tree-image(subjectCol, rss, new),
+treechildren::-moz-tree-image(subjectCol, news, new) {
+  list-style-image: url("chrome://messenger/skin/icons/message-news-new.png");
+}
+
+tree[noattachcol="true"] > treechildren::-moz-tree-image(subjectCol, news, new, attach) {
+  list-style-image: url("chrome://messenger/skin/icons/message-news-new-attach.png");
+}
+
+tree[noattachcol="true"] > treechildren::-moz-tree-image(subjectCol, news, new, attach, offline) {
+  list-style-image: url("chrome://messenger/skin/icons/message-news-new-attach-off.png");
+}
+
+treechildren::-moz-tree-image(subjectCol, news, new, offline) {
+  list-style-image: url("chrome://messenger/skin/icons/message-news-new-offl.png");
+}
+
+.icon-holder[type="message"][MessageType="rss"][Offline="true"],
+.icon-holder[type="message"][MessageType="nntp"][Offline="true"],
+treechildren::-moz-tree-image(subjectCol, rss, offline),
+treechildren::-moz-tree-image(subjectCol, news, offline) {
+  list-style-image: url("chrome://messenger/skin/icons/message-news-offl.png");
+}
+
+treechildren::-moz-tree-image(subjectCol, rss, offline, ignoreSubthread),
+treechildren::-moz-tree-image(subjectCol, news, offline, ignoreSubthread) {
+  list-style-image: url("chrome://messenger/skin/icons/message-news-kill-offl.png");
+}
+
+/* ..... new thread icons for watch and ignore ..... */
+
+treechildren::-moz-tree-image(news, threadCol, watch) {
+  list-style-image: url("chrome://messenger/skin/icons/thread-closed-eye.png");
+}
+
+treechildren::-moz-tree-image(news, threadCol, ignore) {
+  list-style-image: url("chrome://messenger/skin/icons/thread-closed-kill.png");
+}
+
+treechildren::-moz-tree-image(news, threadCol, watch, offline) {
+  list-style-image: url("chrome://messenger/skin/icons/thread-closed-offl-eye.png");
+}
+
+treechildren::-moz-tree-image(news, threadCol, ignore, offline) {
+  list-style-image: url("chrome://messenger/skin/icons/thread-closed-offl-kill.png");
+}
+
+treechildren::-moz-tree-image(news, threadCol, container, hasUnread, watch) {
+  list-style-image: url("chrome://messenger/skin/icons/thread-new-closed-eye.png");
+}
+
+treechildren::-moz-tree-image(news, threadCol, container, hasUnread, ignore) {
+  list-style-image: url("chrome://messenger/skin/icons/thread-new-closed-kill.png");
+}
+
+treechildren::-moz-tree-image(news, threadCol, container, hasUnread, watch, offline) {
+  list-style-image: url("chrome://messenger/skin/icons/thread-new-closed-offl-eye.png");
+}
+
+treechildren::-moz-tree-image(news, threadCol, container, hasUnread, ignore, offline) {
+  list-style-image: url("chrome://messenger/skin/icons/thread-new-closed-offl-kill.png");
+}
+
+#sizeCol,
+#unreadCol,
+#totalCol {
+  text-align: right;
+}

@@ -1,0 +1,41 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* ===== cardViewOverlay.css ============================================
+  == Styles for the Address Book Card view.
+  ======================================================================= */
+
+@import url("chrome://messenger/skin/");
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* ::::: Card Edit dialog ::::: */
+
+.CardEditWidth {
+  width: 42ch;
+}
+
+.CardEditLabel {
+  text-align: end;
+}
+
+.PhoneEditWidth {
+  width: 24ch;
+}
+
+.AddressCardEditWidth {
+  width: 72ch;
+}
+
+.YearWidth {
+  width: 8ch;
+}
+
+.stateZipSpacer {
+  width: 6ch;
+}
+
+.ZipWidth {
+  width: 14ch;
+}
