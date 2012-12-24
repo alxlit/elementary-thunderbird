@@ -50,6 +50,7 @@ menulist > menupopup > menu > .menu-iconic-left {
 
 /* ::::: Mail Toolbars and Menubars ::::: */
 
+/*
 .mail-toolbox,
 .contentTabToolbox {
   -moz-appearance: none;
@@ -67,6 +68,44 @@ menulist > menupopup > menu > .menu-iconic-left {
   -moz-appearance: none;
   background: transparent;
 }
+*/
+
+.contentTabToolbox,
+.contentTabToolbox > toolbar,
+.mail-toolbox,
+.mail-toolbox > toolbar,
+#navigation-toolbox,
+#navigation-toolbox > toolbar { -moz-appearance: none; }
+
+/* Contains Get Mail, Write etc */
+.mail-toolbox {
+  background-image: -moz-linear-gradient(top, #e4e4e4, #bdbdbd);
+  border-bottom: 1px solid #595959;
+  margin: 0;
+}
+
+.mail-toolbox > toolbar { }
+
+/* Contains menu bar, tabs bar */
+#navigation-toolbox {
+  background-image: -moz-linear-gradient(top, #dedede, #bdbdbd);
+  margin: 0;
+  padding: 0;
+}
+
+#navigation-toolbox > toolbar {}
+
+/* Calendar and tasks button on right, also all-tabs button */
+#alltabs-button,
+#tabbar-toolbar {
+  -moz-appearance: none;
+  background: transparent;
+  margin-bottom: 0;
+}
+
+.contentTabToolBox {}
+.contentTabToolBox > toolbar {}
+
 
 /* ::::: throbber ::::: */
 
