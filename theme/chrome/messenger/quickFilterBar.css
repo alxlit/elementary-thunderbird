@@ -24,6 +24,10 @@ toolbar[iconsize="large"] #qfb-show-filter-bar[disabled="true"] {
 
 /* :::: Filter Bar :::: */
 
+#quick-filter-bar {
+  border-bottom: 1px solid #b3b3b3;
+}
+
 #threadTree[filterActive="matches"] {
   outline: 1px solid #4e9a06;
 }
