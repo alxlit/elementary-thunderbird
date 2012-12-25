@@ -3,9 +3,9 @@
      xmlns:em="http://www.mozilla.org/2004/em-rdf#">
   <Description about="urn:mozilla:install-manifest">
     <em:type>4</em:type> <!-- 4 : Theme -->
-    <em:id>elementary@elementaryos.org</em:id>
-    <em:version>1.0</em:version>
-    <em:name>Elementary</em:name>
+    <em:id>elementary-thunderbird@alxlit.addons.mozilla.org</em:id>
+    <em:version>0.1</em:version>
+    <em:name>elementary Thunderbird</em:name>
     <em:description>Thunderbird for elementaryOS</em:description>
     <em:creator>Alex Little</em:creator>
     <em:contributor>Based on the Elementary GTK theme.</em:contributor>
