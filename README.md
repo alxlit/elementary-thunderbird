@@ -14,11 +14,14 @@ officially supported. Please submit bug reports and fixes **[here](http://github
 To install the theme locally, clone the repository and follow the instructions
 [here](https://developer.mozilla.org/en-US/docs/Building_a_Theme#Test).
 
-## Screenshots
+## Preview
 
 ![screenshot](https://raw.github.com/alxlit/elementary-thunderbird/master/screenshots/1.png)
 
-## See also
+## See Also
 
   * [elementary Firefox](https://addons.mozilla.org/en-US/firefox/addon/elementary-firefox/)
+
+
+
 
