@@ -62,7 +62,6 @@ treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected) {
   background-image: linear-gradient(#74b0ee, #4c91da) !important;
 
   min-height: 18px;
-  padding: 0;
 
   /* TODO: Text shadow isn't applied when declared here, figure out where it's
    * supposed to go. */
