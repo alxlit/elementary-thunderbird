@@ -49,18 +49,8 @@ treechildren:not(.autocomplete-treebody)::-moz-tree-row(multicol, odd) {
 }
 
 treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected) {
-  /* background-color: -moz-cellhighlight; */
-
-  border: 2px solid;
-  border-left: none;
-  border-right: none;
-
-  -moz-border-top-colors: #5296de #91c1f3;
-  -moz-border-bottom-colors: #377fc9 #5b9adc;
-
-  background-image: linear-gradient(#74b0ee, #4c91da) !important;
-
-  min-height: 18px;
+  background-color: -moz-cellhighlight;
+  /* background-color: #4a90d9; */
 }
 
 treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected, focus) {
