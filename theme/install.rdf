@@ -6,9 +6,9 @@
     <em:id>elementary-thunderbird@alxlit.addons.mozilla.org</em:id>
     <em:version>0.1</em:version>
     <em:name>elementary Thunderbird</em:name>
-    <em:description>Thunderbird for elementaryOS</em:description>
+    <em:description>Thunderbird for elementary OS</em:description>
     <em:creator>Alex Little</em:creator>
-    <em:contributor>Based on the Elementary GTK theme.</em:contributor>
+    <em:contributor>Based on the elementary GTK theme</em:contributor>
 
     <!-- Thunderbird -->
     <em:targetApplication>
