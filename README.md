@@ -10,8 +10,8 @@ GTK theme.
 ## Development
 
 I am **not** affiliated with the elementary development team, and this theme is **not**
-officially supported. Please submit bug reports and fixes **[here](http://github.com/alxlit/elementary-thunderbird/issues)**.
-To install the theme locally, clone the repository and follow the instructions
+officially supported. Please submit bug reports and fixes [here](http://github.com/alxlit/elementary-thunderbird/issues)
+(on GitHub). To install the theme locally, clone the repository and follow the instructions
 [here](https://developer.mozilla.org/en-US/docs/Building_a_Theme#Test).
 
 ## Preview
@@ -21,7 +21,4 @@ To install the theme locally, clone the repository and follow the instructions
 ## See Also
 
   * [elementary Firefox](https://addons.mozilla.org/en-US/firefox/addon/elementary-firefox/)
-
-
-
 
