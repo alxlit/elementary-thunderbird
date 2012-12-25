@@ -58,14 +58,9 @@ treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected) {
   -moz-border-top-colors: #5296de #91c1f3;
   -moz-border-bottom-colors: #377fc9 #5b9adc;
 
-  background-color: -moz-cellhighlight;
   background-image: linear-gradient(#74b0ee, #4c91da) !important;
 
   min-height: 18px;
-
-  /* TODO: Text shadow isn't applied when declared here, figure out where it's
-   * supposed to go. */
-  text-shadow: #4871a3 0 1px 1px !important;
 }
 
 treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected, focus) {
@@ -100,6 +95,9 @@ treechildren::-moz-tree-cell-text {
 
 treechildren::-moz-tree-cell-text(selected) {
   color: -moz-cellhighlighttext;
+
+  /* TODO: Doesn't seem to work */
+  text-shadow: #fff 0 1px 1px !important;
 }
 
 tree[seltype="cell"] > treechildren::-moz-tree-cell {
