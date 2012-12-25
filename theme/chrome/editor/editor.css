@@ -6,8 +6,7 @@
    == Styles shared throughout the Editor application.
    ========================================================================== */
 
-@import url("chrome://communicator/skin/");
-
+@import url("chrome://global/skin/");
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 #content-frame { 
@@ -48,38 +47,3 @@
   border-left: 1px solid ThreeDDarkShadow;
   border-right: 1px solid ThreeDLightShadow;
 }
-
-/* ::::: struct toolbar ::::: */
-
-#structToolbar {
-  min-width: 1px;
-  overflow: -moz-hidden-unscrollable;
-}
-
-#structSpacer {
-  margin: 2px 0px;
-}
-
-.struct-button {
-  padding: 2px;
-}
-
-.struct-button[checked="true"] {
-  font-weight: bold;
-}
-
-.struct-textbox {
-  -moz-appearance: none !important;
-  padding: 0px !important;
-  margin: 0px !important;
-  border: none !important;
-}
-
-/* ::::: lightweight themes ::::: */
-
-#EditModeToolbar:-moz-lwtheme {
-  text-shadow: none;
-  color: -moz-dialogtext;
-  background-color: -moz-dialog;
-}
-
