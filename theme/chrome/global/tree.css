@@ -37,8 +37,11 @@ tree {
 
 treechildren::-moz-tree-row {
   border: 1px solid transparent;
-  min-height: 18px;
-  height: 1.3em;
+  min-height: 22px !important;
+  height: auto !important;
+
+  /* padding here doesn't add to height, due to whatever the container is... */
+  padding-top: 1px;
 }
 
 treechildren:not(.autocomplete-treebody)::-moz-tree-row(multicol, odd) {
@@ -46,7 +49,24 @@ treechildren:not(.autocomplete-treebody)::-moz-tree-row(multicol, odd) {
 }
 
 treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected) {
+  /* background-color: -moz-cellhighlight; */
+
+  border: 2px solid;
+  border-left: none;
+  border-right: none;
+
+  -moz-border-top-colors: #5296de #91c1f3;
+  -moz-border-bottom-colors: #377fc9 #5b9adc;
+
   background-color: -moz-cellhighlight;
+  background-image: linear-gradient(#74b0ee, #4c91da) !important;
+
+  min-height: 18px;
+  padding: 0;
+
+  /* TODO: Text shadow isn't applied when declared here, figure out where it's
+   * supposed to go. */
+  text-shadow: #4871a3 0 1px 1px !important;
 }
 
 treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected, focus) {
