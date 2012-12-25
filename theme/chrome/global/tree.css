@@ -208,14 +208,15 @@ treecolpicker {
   -moz-appearance: treeheadercell;
   -moz-box-align: center;
   -moz-box-pack: center;
-  border: 2px solid;
-  -moz-border-top-colors: ThreeDHighlight ThreeDLightShadow;
-  -moz-border-right-colors: ThreeDDarkShadow ThreeDShadow;
-  -moz-border-bottom-colors: ThreeDDarkShadow ThreeDShadow;
-  -moz-border-left-colors: ThreeDHighlight ThreeDLightShadow;
+  border: 1px solid;
+  -moz-border-top-colors: ThreeDHighlight;
+  -moz-border-right-colors: ThreeDDarkShadow;
+  -moz-border-bottom-colors: ThreeDDarkShadow;
+  -moz-border-left-colors: ThreeDHighlight;
   background-color: -moz-Dialog;
   color: -moz-DialogText;
-  padding: 0px 2px;
+  font-weight: bold !important;
+  padding: 1px 2px;
 }
 
 treecol:hover,
