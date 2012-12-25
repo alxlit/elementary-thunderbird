@@ -75,6 +75,7 @@ tabpanels {
 
 .tab-stack {
   height: 23px;
+  position: relative;
 }
 
 .tabmail-tab:hover > .tab-stack > .tab-background:not([selected=true]),
@@ -174,8 +175,8 @@ tabpanels {
 
 .tab-icon-image,
 .tab-throbber {
-  width: 16px;
   height: 16px;
+  width: 16px;
   -moz-margin-end: 7px;
 }
 
@@ -223,6 +224,7 @@ tabpanels {
 }
 
 /* In-tab close button */
+
 .tab-close-button {
   -moz-appearance: none;
   -moz-margin-start: 0;
@@ -235,7 +237,7 @@ tabpanels {
   display: block;
   height: 18px;
   list-style-image: url(icons/close-tab.png);
-  position: relative;
+  opacity: 0.65;
   width: 18px;
   z-index: 4;
 }
@@ -243,12 +245,14 @@ tabpanels {
 .tab-close-button:active {
   background: #9d9d9d;
   margin: 0;
+  opacity: 1;
   padding: 0;
 }
 
 .tab-close-button:hover {
   border: none;
   box-shadow: inset 0 0 2px #333;
+  opacity: 1;
 }
 
 .tab-close-button > .toolbarbutton-icon {
