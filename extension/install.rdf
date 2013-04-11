@@ -2,15 +2,14 @@
 <RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:em="http://www.mozilla.org/2004/em-rdf#">
   <Description about="urn:mozilla:install-manifest">
-    <em:type>4</em:type> <!-- 4 : Theme -->
-    <em:id>elementary-thunderbird@alxlit.addons.mozilla.org</em:id>
+    <em:type>2</em:type> <!-- 2 : Extension -->
+    <em:id>elementary-thunderbird-extension@ksmolder.addons.mozilla.org</em:id>
     <em:version>0.2</em:version>
     <em:targetPlatform>Linux</em:targetPlatform>
     <em:name>elementary Thunderbird</em:name>
-    <em:description>Thunderbird for elementary OS</em:description>
-    <em:creator>Alex Little</em:creator>
+    <em:description>Extension to be used with 'Thunderbird for elementary OS' theme</em:description>
+    <em:creator>Kurt Smolderen</em:creator>
     <em:contributor>Based on the elementary GTK theme</em:contributor>
-    <em:contributor>Kurt Smolderen</em:contributor>
 
     <!-- Thunderbird -->
     <em:targetApplication>

@@ -1,0 +1,76 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* ===== addressPanes.css ================================================
+  == Styles for directory pane.
+  ======================================================================= */
+
+@import url("chrome://messenger/skin/");
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#abContactsPanel 
+{
+  -moz-appearance: toolbox;
+  background-color: -moz-Dialog;
+}
+
+#results_box
+{
+  background-color: transparent;
+}
+
+#GeneratedName
+{
+  background-color: transparent;
+}
+
+#PrimaryEmail
+{
+  background-color: transparent;
+}
+
+treechildren::-moz-tree-image(GeneratedName) {
+  -moz-margin-end: 2px;
+  list-style-image: url("chrome://messenger/skin/icons/empty-small.svg?size=menu");
+}
+
+treechildren::-moz-tree-image(GeneratedName, MailList) {
+  -moz-margin-end: 2px;
+  list-style-image: url("moz-icon://stock/system-users?size=menu");
+}
+
+/* ::::: directory pane icons ::::: */
+
+treechildren::-moz-tree-image(DirCol) {
+  -moz-margin-end: 2px;
+  list-style-image: url("moz-icon://stock/office-address-book?size=menu");
+}
+
+treechildren::-moz-tree-image(DirCol, IsMailList-true) {
+  list-style-image: url("moz-icon://stock/system-users?size=menu");
+}
+
+treechildren::-moz-tree-image(DirCol, IsRemote-true) {
+  list-style-image: url("moz-icon://stock/office-address-book?size=menu");
+}
+
+#dirTree [sortDirection="ascending"] {
+  list-style-image: none;
+}
+
+#dirTree [sortDirection="descending"] {
+  list-style-image: none;
+}
+
+/**
+FIXME: This works in folderPane.css... Why not here?
+treechildren::-moz-tree-cell-text(DirCol, IsRemote-true, IsSecure-true) {
+  margin-left: -16px;
+  padding-left: 21px;
+  background-image: url("chrome://messenger/skin/icons/secure.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+}
+**/

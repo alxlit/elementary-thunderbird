@@ -1,0 +1,360 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/**
+ * Tabmail Tabs
+ */
+
+#tabs-toolbar {
+  background-image: -moz-linear-gradient(top, #9f9f9f, #b1b1b1 5px);
+  border: 1px solid #7c7c7c;
+  border-left: none;
+  border-right: none;
+  height: 27px;
+  padding: 0;
+}
+
+#tabpanelcontainer:-moz-lwtheme {
+  color: inherit;
+}
+
+.tabmail-tabs:not(:-moz-lwtheme) {
+  /* -moz-appearance: menubar; */
+  margin: 0;
+  padding: 0;
+}
+
+.tabmail-tabs[overflow="true"] {
+  -moz-padding-start: 0px;
+}
+
+.tabmail-tabs > .tabmail-tab:first-child > .tab-stack > .tab-content >
+.tab-close-button {
+  visibility: collapse;
+}
+
+tabpanels {
+  -moz-appearance: none;
+  background-color: transparent;
+}
+
+/**
+ * Tab
+ */
+
+.tabmail-tab {
+  -moz-appearance: none;
+  background: transparent;
+  border: none;
+  color: #595959;
+  text-shadow: #ddd 0 1px 0;
+  margin: 1px 0 0 0;
+  padding: 0 1px 0 1px;
+}
+
+.tabmail-tab[selected] {
+  background-image: -moz-linear-gradient(top, #e4e4e4, #dedede);
+  border: 1px solid #7c7c7c;
+  border-bottom: 1px solid #dedede;
+  border-radius: 4px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: 0 0 2px #aaa;
+  color: -moz-DialogText;
+  padding: 0;
+  text-shadow: none;
+}
+
+.tabmail-tab:-moz-lwtheme {
+  color: inherit;
+  text-shadow: inherit;
+}
+
+.tab-stack {
+  height: 23px;
+  position: relative;
+}
+
+.tabmail-tab:hover > .tab-stack > .tab-background:not([selected=true]),
+.tab-background[selected=true] {
+  /*
+  background-repeat: no-repeat,
+                     no-repeat,
+                     no-repeat;
+  background-position: left 0,
+                       30px 0,
+                       right 0;
+  background-size: 30px 100%,
+                   -moz-calc(100% - 60px) 100%,
+                   30px 100%;
+  */
+}
+
+.tabmail-tab:hover > .tab-stack > .tab-background:not([selected=true]) {
+  /*
+  background-image: url(icons/tabBackgroundStart.png),
+                    url(icons/tabBackgroundMiddle.png),
+                    url(icons/tabBackgroundEnd.png);
+  */
+}
+
+.tab-background[selected=true] {
+  /*
+  background-image: url(icons/tabActiveStart.svg),
+                    url(icons/tabActiveMiddle.svg),
+                    url(icons/tabActiveEnd.svg);
+  */
+}
+
+.tab-background[selected=true]:-moz-lwtheme {
+  opacity: .52;
+}
+
+.tabmail-tab:not([selected]) +
+.tabmail-tab:not([selected])::before {
+  content: "";
+  display: -moz-box;
+  width: 2px;
+  height: 25px;
+  -moz-margin-start: -2px;
+  -moz-margin-end: 0;
+  background: -moz-linear-gradient(bottom, hsla(210, 23%, 10%, .2),
+              hsla(210, 23%, 10%, .05) 80%, transparent),
+              -moz-linear-gradient(bottom, hsla(0, 0%, 100%, .2),
+              hsla(0, 0%, 100%, .05) 80%, transparent);
+  background-position: 0 0, 1px 0;
+  background-size: 1px 100%;
+  background-repeat: no-repeat;
+}
+
+.tab-content {
+  -moz-padding-start: 10px;
+  -moz-padding-end: 7px;
+}
+
+.tab-background {
+  -moz-margin-start: -14px;
+  -moz-margin-end: -14px;
+}
+
+.tab-background-start,
+.tab-background-end {
+  width: 30px;
+  clip-path: url(chrome://messenger/content/messenger.xul#tab-curve-clip-path);
+}
+
+.tab-background-end:-moz-locale-dir(ltr),
+.tab-background-start:-moz-locale-dir(rtl) {
+  -moz-transform: scaleX(-1);
+}
+
+.tab-background-middle {
+  -moz-box-flex: 1;
+}
+
+.tabmail-tab,
+.tab-background,
+.tab-content {
+  pointer-events: none;
+}
+
+.tab-background-start,
+.tab-background-middle,
+.tab-background-end,
+.tab-close-button {
+  pointer-events: auto;
+}
+
+.tabmail-arrowscrollbox > scrollbox {
+  -moz-padding-start: 14px;
+  -moz-padding-end: 14px;
+}
+
+.tab-icon-image,
+.tab-throbber {
+  height: 16px;
+  width: 16px;
+  -moz-margin-end: 7px;
+}
+
+.tabmail-tab {
+  list-style-image: url("moz-icon://stock/gtk-file?size=menu");
+}
+
+.tab-throbber {
+  list-style-image: url("chrome://global/skin/icons/loading_16.png") !important;
+  -moz-image-region: auto !important;
+}
+
+.tabmail-tab[type="glodaSearch"] {
+  list-style-image: url(moz-icon://stock/gtk-find?size=menu);
+}
+
+.tabmail-tab > .tab-stack > .tab-content > .tab-text {
+  /* tabmail-tab focus ring */
+  border: 1px dotted transparent;
+  margin: -1px !important; /* let the border not consume any space, like outline */
+}
+
+.tabmail-tab:not(:-moz-lwtheme) > .tab-stack > .tab-content > .tab-text {
+  /*
+  color: -moz-MenuBarText;
+  opacity: .5;
+  */
+}
+
+.tabmail-tab[selected]:not(:-moz-lwtheme) > .tab-stack > .tab-content > .tab-text {
+  /*
+  color: -moz-DialogText;
+  opacity: 1;
+  */
+}
+
+.tabmail-tab[selected]:focus > .tab-stack > .tab-content > .tab-text {
+  border: 1px dotted -moz-DialogText;
+}
+
+/* Tab drag and drop */
+.tab-drop-indicator {
+  list-style-image: url(chrome://messenger/skin/icons/tabDragIndicator.png);
+  margin-bottom: -11px;
+}
+
+/* In-tab close button */
+
+.tab-close-button {
+  -moz-appearance: none;
+  -moz-margin-start: 0;
+  -moz-padding-start: 0 !important;
+  -moz-padding-end: 0 !important;
+  -moz-image-region: rect(4px, 12px, 12px, 4px);
+  background: transparent;
+  border: none;
+  border-radius: 3px;
+  display: block;
+  height: 18px;
+  list-style-image: url(icons/close-tab.png);
+  opacity: 0.65;
+  width: 18px;
+  z-index: 4;
+}
+
+.tab-close-button:active {
+  background: #9d9d9d;
+  margin: 0;
+  opacity: 1;
+  padding: 0;
+}
+
+.tab-close-button:hover {
+  border: none;
+  box-shadow: inset 0 0 2px #333;
+  opacity: 1;
+}
+
+.tab-close-button > .toolbarbutton-icon {
+  /* margin-top: 1px; */
+}
+
+.tabmail-tab[selected] > .tab-stack > .tab-content > .tab-close-button {
+  /* Make this button focusable so clicking on it will not focus the tab while
+     it's getting closed. */
+  -moz-user-focus: normal;
+}
+
+.tabmail-tab[selected] > .tab-stack > .tab-content > .tab-close-button:active {
+  background: #ccc;
+}
+
+/**
+ * Tab Scrollbox Arrow Buttons
+ */
+
+/* Tabstrip close button */
+.tabs-closebutton {
+  list-style-image: url("moz-icon://stock/gtk-close?size=menu");
+  border: none;
+  margin-bottom: 1px;
+}
+
+.tabmail-arrowscrollbox > .scrollbutton-up {
+  -moz-appearance: tab-scroll-arrow-back;
+  margin: 0px;
+}
+
+.tabmail-arrowscrollbox > .scrollbutton-down-stack > .scrollbutton-down {
+  -moz-appearance: tab-scroll-arrow-forward;
+  margin: 0px;
+}
+
+.tabs-alltabs-box-animate {
+  background-color: Highlight;
+  opacity: 0.0;
+}
+
+/* All tabs menupopup */
+.alltabs-item {
+  list-style-image: url("moz-icon://stock/gtk-file?size=menu");
+}
+
+.alltabs-item[selected] {
+  font-weight: bold;
+}
+
+.alltabs-item[busy] {
+  list-style-image: url("chrome://global/skin/icons/loading_16.png") !important;
+  -moz-image-region: auto !important;
+}
+
+.tabs-alltabs-button {
+  margin-bottom: 1px;
+}
+
+.tabs-alltabs-button > .toolbarbutton-menu-dropmarker {
+  -moz-appearance: none !important;
+  margin-bottom: -1px;
+  -moz-padding-start: 0 !important;
+  list-style-image: url("chrome://messenger/skin/icons/dropmarker.svg");
+}
+
+.tabs-alltabs-button:hover > .toolbarbutton-menu-dropmarker {
+  list-style-image: url("chrome://messenger/skin/icons/dropmarker-hover.svg");
+}
+
+.tabs-alltabs-button > .toolbarbutton-icon {
+  display: none;
+  -moz-margin-end: 0;
+}
+
+.alltabs-item > .menu-iconic-left {
+  visibility: visible !important;
+}
+
+/* Content Tabs */
+
+.contentTabToolbox {
+  -moz-appearance: none;
+  height: 0px;
+  border: 0;
+}
+
+.contentTabInstance[disablechrome] .contentTabToolbox {
+  display: none;
+}
+
+.contentTabToolbox:not(:-moz-lwtheme) {
+  border-bottom: 1px solid rgb(105, 105, 105);
+}
+
+.contentTabToolbox:-moz-lwtheme {
+  height: 1px;
+  background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5) 50%);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.contentTabToolbar {
+  height: 0px;
+  min-height: 0px;
+  padding: 0;
+}

@@ -1,0 +1,4 @@
+content  calendar    elementary  chrome/content/calendar/
+
+#override chrome://calendar/content/agenda-listbox.xml chrome/content/calendar/agenda-listbox.xml
+override chrome://calendar/content/calendar-views.js chrome/content/calendar/calendar-views.js

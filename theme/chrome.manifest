@@ -1,2 +1,7 @@
-skin  global      elementary  chrome/global/
-skin  messenger   elementary  chrome/messenger/
+skin     global      elementary  chrome/skin/global/
+skin     messenger   elementary  chrome/skin/messenger/
+skin     lightning   elementary  chrome/skin/lightning/
+skin     calendar    elementary  chrome/skin/calendar/
+content  calendar    elementary  chrome/content/calendar/
+
+override chrome://calendar/content/agenda-listbox.xml chrome/content/calendar/agenda-listbox.xml
