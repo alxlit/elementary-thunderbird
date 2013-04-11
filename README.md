@@ -7,7 +7,7 @@ It adds support for Lightning and the addressbook and reuses icons from the curr
 gtk theme. In addition, stylings are applied to base elements as much as possible in order
 to style third-party plugin elements in the same elementary style.
 
-  * Installation: [addons.mozilla.org](https://addons.mozilla.org/en-US/thunderbird/addon/elementary-thunderbird/), or see instructions below
+  * Installation: Download both [elementary-thunderbird.xpi](https://github.com/ksmolder/elementary-thunderbird/blob/master/elementary-thunderbird.xpi) and [elementary-thunderbird-extension.xpi](https://github.com/ksmolder/elementary-thunderbird/blob/master/elementary-thunderbird-extension.xpi) and install drag them to the addons tab in Thunderbird. At this stage, both the theme and extension are needed.
   * License: [GNU GPL v2.0](https://www.gnu.org/licenses/gpl-2.0)
 
 ## Development
@@ -16,6 +16,10 @@ I am **not** affiliated with the elementary development team, and this theme is 
 officially supported. Please submit bug reports and fixes [here](http://github.com/alxlit/elementary-thunderbird/issues)
 (on GitHub). To install the theme locally, clone the repository and follow the instructions
 [here](https://developer.mozilla.org/en-US/docs/Building_a_Theme#Test).
+
+## Todo
+  * Fix bugs :-)
+  * Make theme and extension independent
 
 ## Known bugs
   * Tabs are too wide and icons and close button should be reversed
