@@ -286,10 +286,7 @@ calendar-header-container[weekend="true"][selected="true"],
 }
 
 calendar-event-box {
-    border-left: 1px solid transparent;
-    border-top: 1px solid transparent;
-    border-right: 1px solid transparent;
-    border-bottom: 1px solid #D0D0D0;
+    border: 1px solid transparent;
 }
 
 calendar-event-box .calendar-color-box {
