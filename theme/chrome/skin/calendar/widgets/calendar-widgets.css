@@ -82,7 +82,19 @@ treenode-checkbox > .checkbox-check {
 }
 
 calendar-list-tree tree > treechildren {
-  border: 1px solid ThreeDShadow;
+/*  border: 1px solid ThreeDShadow;*/
+    background-color: #dedede !important;
+}
+
+calendar-list-tree tree > treechildren::-moz-tree-row {
+    background-color: transparent !important;
+}
+
+calendar-list-tree tree > treechildren::-moz-tree-cell-text(selected),
+calendar-list-tree tree > treechildren::-moz-tree-row(selected) {
+    border: none;
+    color: -moz-FieldText !important;
+    font-weight: bold !important;
 }
 
 calendar-list-tree .tree-scrollable-columns {
