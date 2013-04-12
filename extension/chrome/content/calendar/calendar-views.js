@@ -459,7 +459,6 @@ function getViewStyleSheet() {
  *
  * @param aCalendar     The calendar to update the stylesheet for.
  */
-/*
 function updateStyleSheetForViews(aCalendar) {
     if (!updateStyleSheetForViews.ruleCache) {
         updateStyleSheetForViews.ruleCache = {};
@@ -469,52 +468,24 @@ function updateStyleSheetForViews(aCalendar) {
     if (!(aCalendar.id in ruleCache)) {
         // We haven't create a rule for this calendar yet, do so now.
         let sheet = getViewStyleSheet();
-        let ruleString = '.calendar-color-box[calendar-id="' + aCalendar.id + '"] {} ';
-        let ruleIndex = sheet.insertRule(ruleString, sheet.cssRules.length);
-
-        ruleCache[aCalendar.id] = sheet.cssRules[ruleIndex];
-    }
-
-    let color = aCalendar.getProperty("color") || "#A8C2E1";
-        ruleCache[aCalendar.id].style.backgroundColor = color;
-        ruleCache[aCalendar.id].style.color = color;
-        ruleCache[aCalendar.id].style.borderColor = color;
-}
-*/
-
-function updateStyleSheetForViews(aCalendar) {
-    if (!updateStyleSheetForViews.ruleCache) {
-        updateStyleSheetForViews.ruleCache = {};
-    }
-    let ruleCache = updateStyleSheetForViews.ruleCache;
-
-    if (!(aCalendar.id in ruleCache)) {
-        // We haven't create a rule for this calendar yet, do so now.
-        let sheet = getViewStyleSheet();
-        let ruleString1 = 'calendar-month-day-box-item .calendar-color-box[calendar-id="' + aCalendar.id + '"] {} ';
+        // Default
+        let ruleString1 = '.calendar-color-box[calendar-id="' + aCalendar.id + '"] {} ';
         let ruleIndex1 = sheet.insertRule(ruleString1, sheet.cssRules.length);
-        let ruleString2 = 'calendar-month-day-box-item[allday="true"] .calendar-color-box[calendar-id="' + aCalendar.id + '"] {} ';
+        // Events in multiweek/ month view
+        let ruleString2 = 'calendar-month-day-box-item:not([allday="true"]) .calendar-color-box[calendar-id="' + aCalendar.id + '"] {} ';
         let ruleIndex2 = sheet.insertRule(ruleString2, sheet.cssRules.length);
-        let ruleString3 = 'calendar-event-box .calendar-color-box[calendar-id="' + aCalendar.id + '"] {} ';
-        let ruleIndex3 = sheet.insertRule(ruleString3, sheet.cssRules.length);
-
+        // Events in day/ week view
+        
         ruleCache[aCalendar.id] = aCalendar.id;
 
         let color = aCalendar.getProperty("color") || "#A8C2E1";
-        sheet.cssRules[ruleIndex1].style.backgroundColor = "transparent";
-        sheet.cssRules[ruleIndex1].style.color = color;
+        let contrastColor = cal.getContrastingTextColor(color);
+        sheet.cssRules[ruleIndex1].style.backgroundColor = color;
+        sheet.cssRules[ruleIndex1].style.color = contrastColor;
         sheet.cssRules[ruleIndex1].style.borderColor = color;
-        sheet.cssRules[ruleIndex2].style.backgroundColor = color;
-        sheet.cssRules[ruleIndex2].style.color = cal.getContrastingTextColor(color);
+        sheet.cssRules[ruleIndex2].style.backgroundColor =  "transparent";
+        sheet.cssRules[ruleIndex2].style.color = color;
         sheet.cssRules[ruleIndex2].style.borderColor = color;
-        sheet.cssRules[ruleIndex3].style.backgroundColor = color;
-        sheet.cssRules[ruleIndex3].style.color = cal.getContrastingTextColor(color);
-        sheet.cssRules[ruleIndex3].style.borderColor = color;
-/*        
-        ruleCache[aCalendar.id][0] = sheet.cssRules[ruleIndex1];
-        ruleCache[aCalendar.id][1] = sheet.cssRules[ruleIndex2];
-        ruleCache[aCalendar.id][2] = sheet.cssRules[ruleIndex3];
-*/
     }
 }
 
