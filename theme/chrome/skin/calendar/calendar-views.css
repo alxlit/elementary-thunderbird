@@ -284,11 +284,12 @@ calendar-event-box {
     border-bottom: 1px solid #D0D0D0;
 }
 
+/* ksmolder
 calendar-event-box .calendar-color-box {
     color: #000000 !important;
     opacity: 0.8;
     border-radius: 5px;
-}
+}*/
 
 calendar-event-box[selected="true"] {
     border-left: 1px solid transparent;
@@ -427,6 +428,12 @@ calendar-month-view,
 calendar-multiweek-view {
 }
 
+calendar-month-view grid,
+calendar-multiweek-view grid {
+/*    overflow: -moz-scrollbars-vertical;*/
+    overflow: hidden;
+}
+
 .calendar-month-view-grid-column {
     min-width: 1px;
     width: 1px;
@@ -514,15 +521,6 @@ calendar-month-day-box:first-child {
 calendar-month-day-box-item {
     margin: 1px;
     padding: 0px 1px;
-}
-
-calendar-month-day-box-item:not([allday]) .calendar-color-box {
-    background-color: transparent !important;
-}
-
-calendar-month-day-box-item[allday="true"] .calendar-color-box {
-/* FIXME ksmolder: should be default text style? */
-    color: #000000 !important;
 }
 
 calendar-month-day-box-item[selected="true"] .calendar-color-box {
