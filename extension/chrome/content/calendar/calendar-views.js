@@ -482,10 +482,8 @@ function updateStyleSheetForViews(aCalendar) {
         let contrastColor = cal.getContrastingTextColor(color);
         sheet.cssRules[ruleIndex1].style.backgroundColor = color;
         sheet.cssRules[ruleIndex1].style.color = contrastColor;
-        sheet.cssRules[ruleIndex1].style.borderColor = color;
         sheet.cssRules[ruleIndex2].style.backgroundColor =  "transparent";
         sheet.cssRules[ruleIndex2].style.color = color;
-        sheet.cssRules[ruleIndex2].style.borderColor = color;
     }
 }
 

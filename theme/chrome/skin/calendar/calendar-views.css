@@ -278,8 +278,7 @@ calendar-header-container[weekend="true"][selected="true"],
 }
 
 .calendar-color-box {
-    border-radius: 5px;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .calendar-color-box .calendar-event-details {
@@ -294,7 +293,7 @@ calendar-event-box {
 }
 
 calendar-event-box .calendar-color-box {
-    opacity: 0.8;
+    border-radius: 5px;
 }
 
 calendar-event-box[selected="true"] {
@@ -527,6 +526,10 @@ calendar-month-day-box:first-child {
 calendar-month-day-box-item {
     margin: 1px;
     padding: 0px 1px;
+}
+
+calendar-month-day-box-item .calendar-color-box {
+    border-radius: 3px;
 }
 
 calendar-month-day-box-item[selected="true"] .calendar-color-box {
