@@ -277,6 +277,15 @@ calendar-header-container[weekend="true"][selected="true"],
     color: inherit;
 }
 
+.calendar-color-box {
+    border-radius: 5px;
+    opacity: 0.7;
+}
+
+.calendar-color-box .calendar-event-details {
+    opacity: 1.0;
+}
+
 calendar-event-box {
     border-left: 1px solid transparent;
     border-top: 1px solid transparent;
@@ -284,12 +293,9 @@ calendar-event-box {
     border-bottom: 1px solid #D0D0D0;
 }
 
-/* ksmolder
 calendar-event-box .calendar-color-box {
-    color: #000000 !important;
     opacity: 0.8;
-    border-radius: 5px;
-}*/
+}
 
 calendar-event-box[selected="true"] {
     border-left: 1px solid transparent;
@@ -531,9 +537,6 @@ calendar-month-day-box-item[selected="true"] .calendar-color-box {
 .calendar-color-box {
     /* This rule should be adopted if the alarm image size is changed */
     min-height: 13px;
-/*ksmolder: 
-    border-radius: 6px;
- ksmolder end*/
 }
 
 .calendar-month-day-box-item-label {
