@@ -1,0 +1,199 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* ::::: Folder Pane ::::: */
+
+/* this needs a different rule from the tree because otherwise the margin
+   applies to the tab */
+.tabmail-tab[type="folder"] {
+  list-style-image: url("moz-icon://stock/gtk-directory?size=menu");
+}
+
+treechildren::-moz-tree-image(folderNameCol) {
+  list-style-image: url("moz-icon://stock/gtk-directory?size=menu");
+  -moz-margin-end: 2px;
+}
+
+treechildren::-moz-tree-image(folderNameCol, newMessages-true) {
+  list-style-image: url("moz-icon://stock/gtk-directory?size=menu");
+}
+
+treechildren::-moz-tree-image(folderNameCol, serverType-rss, newMessages-true) {
+  list-style-image: url("moz-icon://stock/internet-news-reader?size=menu");
+}
+
+/* ..... Inbox ..... */
+
+.tabmail-tab[type="folder"][SpecialFolder="Inbox"],
+treechildren::-moz-tree-image(folderNameCol, specialFolder-Inbox) {
+  list-style-image: url("moz-icon://stock/mail-inbox?size=menu");
+}
+
+/* ..... Sent ..... */
+
+.tabmail-tab[type="folder"][SpecialFolder="Sent"],
+treechildren::-moz-tree-image(folderNameCol, specialFolder-Sent) {
+  list-style-image: url("moz-icon://stock/mail-sent?size=menu");
+}
+
+/* ..... Outbox ..... */
+
+.tabmail-tab[type="folder"][SpecialFolder="Outbox"],
+treechildren::-moz-tree-image(folderNameCol, specialFolder-Outbox) {
+  list-style-image: url("moz-icon://stock/mail-outbox?size=menu");
+}
+
+/* ..... Drafts ..... */
+
+.tabmail-tab[type="folder"][SpecialFolder="Drafts"],
+treechildren::-moz-tree-image(folderNameCol, specialFolder-Drafts) {
+  list-style-image: url("moz-icon://stock/accessories-text-editor?size=menu");
+}
+
+/* ..... Templates ..... */
+
+.tabmail-tab[type="folder"][SpecialFolder="Templates"],
+treechildren::-moz-tree-image(folderNameCol, specialFolder-Templates) {
+  list-style-image: url("moz-icon://stock/folder-templates?size=menu");
+}
+
+/* ..... Junk ..... */
+
+.tabmail-tab[type="folder"][SpecialFolder="Junk"],
+treechildren::-moz-tree-image(folderNameCol, specialFolder-Junk) {
+  list-style-image: url("moz-icon://stock/mail-mark-junk?size=menu");
+}
+
+/* ..... Trash ..... */
+
+.tabmail-tab[type="folder"][SpecialFolder="Trash"],
+treechildren::-moz-tree-image(folderNameCol, specialFolder-Trash) {
+  list-style-image: url("moz-icon://stock/user-trash?size=menu");
+}
+
+/* ..... Archives ..... */
+
+.tabmail-tab[type="folder"][SpecialFolder="Archive"],
+treechildren::-moz-tree-image(folderNameCol, specialFolder-Archive) {
+  list-style-image: url("moz-icon://stock/mail-archive?size=menu");
+}
+
+/* ..... Saved Search Folder ..... */
+
+.tabmail-tab[type="folder"][SpecialFolder="Virtual"],
+treechildren::-moz-tree-image(folderNameCol, specialFolder-Virtual) {
+  list-style-image: url("moz-icon://stock/folder-saved-search?size=menu");
+}
+
+/* ..... Newsgroup ..... */
+
+.tabmail-tab[type="folder"][ServerType="nntp"],
+treechildren::-moz-tree-image(folderNameCol, serverType-nntp) {
+  list-style-image: url("moz-icon://stock/folder-publicshare?size=menu");
+}
+
+/* ..... Feed ..... */
+
+.tabmail-tab[type="folder"][ServerType="rss"],
+treechildren::-moz-tree-image(folderNameCol, serverType-rss) {
+  list-style-image: url("moz-icon://stock/internet-news-reader?size=menu");
+}
+
+/* ..... Account nodes ..... */
+
+treechildren::-moz-tree-cell-text(folderNameCol, newMessages-true),
+treechildren::-moz-tree-cell-text(folderNameCol, specialFolder-Inbox, newMessages-true) {
+  font-weight: bold;
+}
+
+/* ..... Mail server  ..... */
+.tabmail-tab[type="folder"][IsServer="true"], 
+treechildren::-moz-tree-image(folderNameCol, isServer-true) {
+  list-style-image: url("chrome://messenger/skin/icons/mail-small.svg?size=menu");
+}
+
+/* ..... Local folders ..... */
+.tabmail-tab[type="folder"][IsServer="true"][ServerType="none"], 
+treechildren::-moz-tree-image(folderNameCol, isServer-true, serverType-none) {
+  list-style-image: url("moz-icon://stock/system?size=menu");
+}
+
+/* ..... News server ..... */
+.tabmail-tab[type="folder"][IsServer="true"][ServerType="nntp"],
+treechildren::-moz-tree-image(folderNameCol, isServer-true, serverType-nntp) {
+  list-style-image: url("moz-icon://stock/internet-news-reader?size=menu");
+}
+
+/* ..... Feed server ..... */
+
+.tabmail-tab[type="folder"][IsServer="true"][ServerType="rss"],
+treechildren::-moz-tree-image(folderNameCol, isServer-true, serverType-rss) {
+  list-style-image: url("moz-icon://stock/internet-news-reader?size=menu");
+}
+
+/* ::::: All Servers ::::: */
+
+treechildren::-moz-tree-cell-text(closed, subfoldersHaveUnreadMessages-true) {
+  font-weight: bold;
+}
+
+treechildren::-moz-tree-cell-text(folderNameCol, isServer-true),
+treechildren::-moz-tree-cell-text(hasUnreadMessages-true) {
+  font-weight: bold;
+}
+
+treechildren::-moz-tree-cell-text(folderNameCol, noSelect-true) {
+  color: GrayText;
+  font-style: italic;
+}
+
+.tree-folder-checkbox {
+  list-style-image: none;
+}
+
+/* ::::: Folder Summary Popup ::::: */
+
+.folderSummary-message-row {
+  /* This max width ends up dictating the overall width of the popup
+     because it controls how large the preview, subject and sender text can be
+     before cropping kicks in */
+  max-width: 450px;
+}
+
+.folderSummary-subject {
+  font-weight: bold; 
+}
+
+.folderSummary-previewText {
+  color: GrayText;
+}
+
+/* Make sidebar look normal. */
+
+treechildren::-moz-tree-twisty {
+  -moz-appearance: treetwisty;
+  margin-right: 3px;
+}
+
+treechildren::-moz-tree-twisty(open) {
+  -moz-appearance: treetwistyopen;
+}
+
+/** FIXME: Something similar for tabs... **/
+treechildren::-moz-tree-cell-text(folderNameCol, isServer-true, isSecure-true) {
+  margin-left: -16px;
+  padding-left: 21px;
+  background-image: url("chrome://messenger/skin/icons/secure.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+treechildren::-moz-tree-cell-text(folderNameCol, newMessages-true) {
+  font-weight: bold;
+  margin-left: -12px;
+  padding-left: 17px;
+  background-image: url("chrome://messenger/skin/icons/folder-new-star.png");
+  background-repeat: no-repeat;
+  background-position: left;
+}

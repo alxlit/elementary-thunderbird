@@ -1,2 +1,4 @@
-skin  global      elementary  chrome/global/
-skin  messenger   elementary  chrome/messenger/
+skin     global      elementary  chrome/skin/global/
+skin     messenger   elementary  chrome/skin/messenger/
+skin     lightning   elementary  chrome/skin/lightning/
+skin     calendar    elementary  chrome/skin/calendar/

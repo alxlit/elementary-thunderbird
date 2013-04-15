@@ -4,11 +4,13 @@
   <Description about="urn:mozilla:install-manifest">
     <em:type>4</em:type> <!-- 4 : Theme -->
     <em:id>elementary-thunderbird@alxlit.addons.mozilla.org</em:id>
-    <em:version>0.1</em:version>
+    <em:version>0.2</em:version>
+    <em:targetPlatform>Linux</em:targetPlatform>
     <em:name>elementary Thunderbird</em:name>
     <em:description>Thunderbird for elementary OS</em:description>
     <em:creator>Alex Little</em:creator>
     <em:contributor>Based on the elementary GTK theme</em:contributor>
+    <em:contributor>Kurt Smolderen</em:contributor>
 
     <!-- Thunderbird -->
     <em:targetApplication>

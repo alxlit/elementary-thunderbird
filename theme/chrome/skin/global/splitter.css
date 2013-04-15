@@ -1,0 +1,108 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* ===== splitter.css ===================================================
+  == Styles used by the XUL splitter element.
+  ======================================================================= */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* ::::: splitter (vertical) ::::: */
+
+splitter {
+  -moz-appearance: none;
+  cursor: ew-resize;
+  border: none;
+  border-left: 1px solid ThreeDShadow;
+  /* splitter grip area */
+  width: 5px;
+  margin: 0;
+  margin-top: 0;
+  /* make only the splitter border visible */
+  -moz-margin-end: -5px;
+  /* because of the negative margin needed to make the splitter visible */
+  position: relative;
+  z-index: 10;
+  -moz-transition: border-width .3s ease-in;
+  -moz-box-align: center;
+  -moz-box-pack: center;
+}
+
+/* Until Bug 621351 is fixed we need border-right and border-left in
+ * combination with -moz-locale-dir instead of -moz-border-end and
+ * -moz-border-start for -moz-transition
+ */
+splitter:-moz-locale-dir(rtl) {
+  border: none;
+  border-right: 1px solid ThreeDShadow;
+}
+
+splitter[state="collapsed"]:hover:-moz-locale-dir(ltr) {
+  border-left: 4px solid highlight;
+}
+
+splitter[state="collapsed"]:hover:-moz-locale-dir(rtl) {
+  border-right: 4px solid highlight;
+}
+
+splitter[state="collapsed"][collapse="before"],
+splitter[state="collapsed"][substate="before"],
+splitter[state="collapsed"][collapse="after"]:-moz-locale-dir(rtl),
+splitter[state="collapsed"][substate="after"]:-moz-locale-dir(rtl) {
+  cursor: e-resize;
+}
+
+splitter[state="collapsed"][collapse="after"],
+splitter[state="collapsed"][substate="after"],
+splitter[state="collapsed"][collapse="before"]:-moz-locale-dir(rtl),
+splitter[state="collapsed"][substate="before"]:-moz-locale-dir(rtl) {
+  cursor: w-resize;
+}
+
+/* ::::: splitter (horizontal) ::::: */
+
+splitter[orient="vertical"] {
+  -moz-appearance: none;
+  cursor: ns-resize;
+  border: none;
+  border-bottom: 1px solid ThreeDShadow;
+  /* splitter grip area */
+  height: 5px;
+  margin: 0;
+  /* make only the splitter border visible */
+  margin-top: -5px;
+  /* because of the negative margin needed to make the splitter visible */
+  position: relative;
+  z-index: 10;
+  -moz-transition: border-width .3s ease-in;
+  -moz-box-align: center;
+  -moz-box-pack: center;
+}
+
+splitter[orient="vertical"][state="collapsed"][collapse="before"],
+splitter[orient="vertical"][state="collapsed"][substate="before"] {
+  cursor: s-resize;
+}
+
+splitter[orient="vertical"][state="collapsed"][collapse="after"],
+splitter[orient="vertical"][state="collapsed"][substate="after"] {
+  cursor: n-resize;
+}
+
+splitter[disabled="true"] {
+  cursor: default !important;
+}
+
+/* ::::: splitter grippy ::::: */
+
+grippy {
+  cursor: pointer;
+  min-width: 4px;
+  min-height: 115px;
+}
+
+splitter[orient="vertical"] > grippy {
+  min-width: 115px;
+  min-height: 4px;
+}
