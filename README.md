@@ -4,10 +4,9 @@
 A theme for Thunderbird 17 that integrates with [elementary's](http://elementaryos.org)
 GTK theme. This version is based on [Alex Little's work](https://github.com/alxlit/elementary-thunderbird/).
 It adds support for Lightning and the addressbook and reuses icons from the current active 
-gtk theme. In addition, stylings are applied to base elements as much as possible in order
-to style third-party plugin elements in the same elementary style.
+gtk theme.
 
-  * Installation: Download both [elementary-thunderbird.xpi](https://github.com/ksmolder/elementary-thunderbird/blob/master/elementary-thunderbird.xpi) and [elementary-thunderbird-extension.xpi](https://github.com/ksmolder/elementary-thunderbird/blob/master/elementary-thunderbird-extension.xpi) and install drag them to the addons tab in Thunderbird.
+  * Installation: Download [elementary-thunderbird.xpi](https://github.com/ksmolder/elementary-thunderbird/blob/master/elementary-thunderbird.xpi) and drag it to the addons tab in Thunderbird.
   * License: [GNU GPL v2.0](https://www.gnu.org/licenses/gpl-2.0)
 
 ## Development
@@ -20,10 +19,6 @@ officially supported. Please submit bug reports and fixes [here](http://github.c
 ### Theme
 
 The elementary-theme uses native icons from the elementary-icon package as much as possible. Therefore, the theme is only installable on Linux systems and requires the elementary-icon set to be activated.
-
-### Extension
-
-The extension alters some behaviour of the Lightning/ calendar extension. All-day events are drawn in a coloured box, while all other events do not use any background colour but are displayed in the calendar-specific colour instead.
 
 ## Todo
   * Fix bugs :-)

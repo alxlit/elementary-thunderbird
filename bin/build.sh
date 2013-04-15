@@ -12,8 +12,5 @@ find . -name *~ -exec rm {} \;
 cd theme/
 zip -FS -r ../elementary-thunderbird.xpi *
 
-cd ../extension/
-zip -FS -r ../elementary-thunderbird-extension.xpi *
-
 cd $WORKING_DIR
 
