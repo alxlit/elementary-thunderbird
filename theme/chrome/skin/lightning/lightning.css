@@ -1,0 +1,171 @@
+/* ***** BEGIN LICENSE BLOCK *****
+ * Version: MPL 1.1/GPL 2.0/LGPL 2.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with
+ * the License. You may obtain a copy of the License at
+ * http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+ * for the specific language governing rights and limitations under the
+ * License.
+ *
+ * The Original Code is Lightning code.
+ *
+ * The Initial Developer of the Original Code is Oracle Corporation
+ * Portions created by the Initial Developer are Copyright (C) 2005
+ * the Initial Developer. All Rights Reserved.
+ *
+ * Contributor(s):
+ *   Mike Shaver <shaver@mozilla.org>
+ *   Vladimir Vukicevic <vladimir@pobox.com>
+ *   Joey Minta <jminta@gmail.com>
+ *   Simon Paquet <bugzilla@babylonsounds.com>
+ *   Philipp Kewisch <mozilla@kewis.ch>
+ *   Lars Wohlfahrt <thetux.moz@googlemail.com>
+ *
+ * Alternatively, the contents of this file may be used under the terms of
+ * either the GNU General Public License Version 2 or later (the "GPL"), or 
+ * the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+ * in which case the provisions of the GPL or the LGPL are applicable instead
+ * of those above. If you wish to allow use of your version of this file only
+ * under the terms of either the GPL or the LGPL, and not to allow others to
+ * use your version of this file under the terms of the MPL, indicate your
+ * decision by deleting the provisions above and replace them with the notice
+ * and other provisions required by the GPL or the LGPL. If you do not delete
+ * the provisions above, a recipient may use your version of this file under
+ * the terms of any one of the MPL, the GPL or the LGPL.
+ *
+ * ***** END LICENSE BLOCK ***** */
+
+/* Calendar list rules */
+#calendar-panel {
+  padding: 0px 5px 5px;
+}
+
+/* Lightning preferences icon */
+radio[pane=paneLightning] {
+  list-style-image: url("moz-icon://stock/office-calendar?size=dialog");
+}
+
+/* iMIP notification bar */
+#imip-bar > image {
+  list-style-image: url("mmoz-icon://stock/office-calendar?size=toolbar");
+}
+
+/* ::::: tabs ::::: */
+
+/* ::: new tab buttons ::: */
+#calendar-tab-button {
+  list-style-image: url("moz-icon://stock/office-calendar?size=menu");
+}
+
+#calendar-tab-button[disabled] {
+  list-style-image: url("moz-icon://stock/office-calendar?size=menu&state=disabled") !important;
+}
+
+#task-tab-button {
+  list-style-image: url("chrome://lightning/skin/icons/tasks-small.svg?size=menu");
+}
+
+#task-tab-button[disabled] {
+  list-style-image: url("chrome://lightning/skin/icons/tasks-small.svg?size=menu&state=disabled") !important;
+}
+
+/* ::: tab icons ::: */
+.tabmail-tab[type="calendar"],
+.tabmail-tab[type="calendar"][selected="true"] {
+  list-style-image: url("moz-icon://stock/office-calendar?size=menu");
+}
+
+.tabmail-tab[type="tasks"],
+.tabmail-tab[type="tasks"][selected="true"] {
+  list-style-image: url("chrome://lightning/skin/icons/tasks-small.svg?size=menu");
+}
+
+
+/* Lightning sidebar background in calendar and task mode */
+#ltnSidebar {
+  border-bottom: 1px solid ThreeDShadow;
+  background-color: #dedede;
+}
+
+/* Write button */
+#newMsgButton-mail-menuitem {
+  list-style-image: url("moz-icon://stock/mail-message-new?size=toolbarsmall");
+}
+
+#newMsgButton-mail-menuitem[disabled] {
+  list-style-image: url("moz-icon://stock/mail-message-new?size=toolbarsmall&state=disabled") !important;
+}
+
+#newMsgButton-calendar-menuitem {
+  list-style-image: url("moz-icon://stock/event-new?size=toolbarsmall");
+}
+
+#newMsgButton-calendar-menuitem[disabled] {
+  list-style-image: url("moz-icon://stock/event-new?size=toolbarsmall&state=disabled") !important;
+}
+
+#newMsgButton-task-menuitem {
+  list-style-image: url("chrome://lightning/skin/icons/task-new-small.svg?size=toolbarsmall");
+}
+#newMsgButton-task-menuitem[disabled] {
+  list-style-image: url("chrome://lightning/skin/icons/task-new-small.svg?size=toolbarsmall&state=disabled") !important;
+}
+
+/* Today pane button in status bar */
+#calendar-status-todaypane-button,
+#calendar-status-todaypane-button[checked="true"] {
+  min-width: 0;
+  min-height: 0;
+  margin: 1px 0 0;
+  -moz-appearance: none;
+  -moz-border-radius: 3px;
+  padding: 1px 2px 0 !important;
+  border: 1px solid transparent;
+}
+
+#calendar-status-todaypane-button:hover {
+  border: 1px solid ThreeDShadow;
+  background-color: transparent !important;
+  background-image: none;
+  -moz-appearance: none;
+}
+
+#calendar-status-todaypane-button > stack> .toolbarbutton-icon-begin {
+  list-style-image: url("chrome://lightning/skin/icons/calendar.svg?size=toolbarsmall");
+}
+
+#calendar-status-todaypane-button > stack > .toolbarbutton-day-text {
+  text-align: center;
+  margin-left: 0px;
+  margin-top: 4px;
+  margin-bottom: -4px;
+  font-size: 7pt;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-shadow: none;
+/*  color: DarkBlue;*/
+  background-color: transparent;
+}
+
+/* shift the today pane button label up by one pixel to center it */
+#calendar-status-todaypane-button > .toolbarbutton-text {
+  margin: 0 0 1px !important;
+}
+
+#calendar-status-todaypane-button > .toolbarbutton-icon-end {
+  -moz-appearance: button-arrow-previous;
+}
+
+#calendar-status-todaypane-button[checked="true"] > .toolbarbutton-icon-end {
+  -moz-appearance: button-arrow-next;
+}
+
+#calMinimonthBox {
+  margin-top: 3px;
+  border: 1px solid ThreeDShadow;
+  background-color: #dedede;
+}

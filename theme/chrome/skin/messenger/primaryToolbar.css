@@ -1,0 +1,577 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* ===== primaryToolbar.css =============================================
+   == Images for the Mail primary toolbar.
+   == This file is mainly about the general look-and-feel of
+   == native-OS-style toolbars at the top of various windows, as well as
+   == the specifically about the ones that appear on the 3-pane window and
+   == the standalone message window.  The other native-OS-style toolbars
+   == (addressbook and compose) are already styled elsewhere.
+   ====================================================================== */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* ::::: primary toolbar buttons ::::: */
+
+.toolbarbutton-1 {
+  -moz-box-orient: vertical;
+}
+
+toolbox[labelalign="end"] .toolbarbutton-1,
+toolbox[labelalign="end"] .toolbarbutton-1[type="menu-button"]
+  > .toolbarbutton-menubutton-button {
+  -moz-box-orient: horizontal;
+}
+
+toolbox[labelalign="end"] > toolbar[mode="full"] .toolbarbutton-1 .toolbarbutton-text {
+  -moz-padding-start: 2px;
+}
+
+toolbox[labelalign="end"] > toolbar[mode="full"] deck .toolbarbutton-text {
+  text-align: start;
+}
+
+.toolbarbutton-1[type="menu"] {
+  -moz-binding: url("chrome://global/content/bindings/toolbarbutton.xml#menu-vertical");
+}
+
+toolbox[labelalign="end"] .toolbarbutton-1[type="menu"] {
+  -moz-binding: url("chrome://global/content/bindings/toolbarbutton.xml#menu");
+}
+
+#button-getmsg {
+  list-style-image: url("moz-icon://stock/mail-inbox?size=toolbar");
+}
+
+#button-getmsg[disabled] {
+  list-style-image: url("moz-icon://stock/mail-inbox?size=toolbar&state=disabled") !important;
+}
+
+#button-newmsg {
+  list-style-image: url("moz-icon://stock/mail-message-new?size=toolbar");
+}
+
+#button-newmsg[disabled] {
+  list-style-image: url("moz-icon://stock/mail-message-new?size=toolbar&state=disabled") !important;
+} 
+
+#button-address {
+  list-style-image: url("moz-icon://stock/office-address-book?size=toolbar");
+}
+
+#button-address[disabled="true"] {
+  list-style-image: url("moz-icon://stock/office-address-book?size=toolbar&state=disabled") !important;
+} 
+
+#button-reply {
+  list-style-image: url("moz-icon://stock/mail-reply-sender?size=toolbar");
+}
+
+#button-reply[disabled] {
+  list-style-image: url("moz-icon://stock/mail-reply-sender?size=toolbar&state=disabled") !important;
+} 
+
+#button-replyall {
+  list-style-image: url("moz-icon://stock/mail-reply-all?size=toolbar");
+}
+
+#button-replyall[disabled] {
+  list-style-image: url("moz-icon://stock/mail-reply-all?size=toolbar&state=disabled") !important;
+}
+
+#button-replylist {
+  list-style-image: url("moz-icon://stock/mail-reply-all?size=toolbar");
+}
+
+#button-replylist[disabled] {
+  list-style-image: url("moz-icon://stock/mail-reply-all?size=toolbar&state=disabled") !important;
+}
+
+#button-forward {  
+  list-style-image: url("moz-icon://stock/mail-forward?size=toolbar");
+}
+
+#button-forward[disabled] {
+  list-style-image: url("moz-icon://stock/mail-forward?size=toolbar&state=disabled") !important;
+}
+
+.junk-button {
+  list-style-image: url("moz-icon://stock/mail-mark-junk?size=toolbar");
+}
+
+.junk-button[disabled="true"] {
+  list-style-image: url("moz-icon://stock/mail-mark-junk?size=toolbar&state=disabled") !important;
+}
+
+#button-mark {
+  list-style-image: url("moz-icon://stock/mail-mark-read?size=toolbar");
+}
+
+#button-mark[disabled] {
+  list-style-image: url("moz-icon://stock/mail-mark-read?size=toolbar&state=disabled") !important;
+}
+
+#button-nextMsg, #button-next, #button-previousMsg:-moz-locale-dir(rtl), #button-previous:-moz-locale-dir(rtl) {  
+  list-style-image: url("moz-icon://stock/gtk-go-forward-ltr?size=toolbar");
+}
+
+#button-nextMsg[disabled], #button-next[disabled], #button-previousMsg:-moz-locale-dir(rtl)[disabled], #button-previous:-moz-locale-dir(rtl)[disabled] {
+  list-style-image: url("moz-icon://stock/gtk-go-forward-ltr?size=toolbar&state?disabled");
+}
+
+#button-previousMsg, #button-previous, #button-nextMsg:-moz-locale-dir(rtl), #button-next:-moz-locale-dir(rtl) {
+  list-style-image: url("moz-icon://stock/gtk-go-back-ltr?size=toolbar");
+}
+
+#button-previousMsg[disabled], #button-previous[disabled], #button-nextMsg:-moz-locale-dir(rtl)[disabled], #button-next:-moz-locale-dir(rtl)[disabled] {
+  list-style-image: url("moz-icon://stock/gtk-go-back-ltr?size=toolbar&state=disabled");
+}
+
+#button-nextUnread {
+  list-style-image: url("moz-icon://stock/go-down?size=toolbar");
+}
+
+#button-nextUnread[disabled] {
+  list-style-image: url("moz-icon://stock/go-down?size=toolbar&state=disabled");
+}
+
+#button-previousUnread {
+  list-style-image: url("moz-icon://stock/go-up?size=toolbar");
+}
+
+#button-previousUnread[disabled] {
+  list-style-image: url("moz-icon://stock/go-up?size=toolbar&state=disabled");
+}
+
+#button-tag {
+  /** FIXME: non stock-icon **/
+  list-style-image: url("chrome://messenger/skin/icons/tag.svg?size=toolbar");
+}
+
+#button-tag[disabled] {
+  /** FIXME: non stock-icon **/
+  list-style-image: url("chrome://messenger/skin/icons/tag.svg?size=toolbar&state=disabled") !important;
+}
+
+#button-compact {
+  list-style-image: url("moz-icon://stock/gtk-clear?size=toolbar");
+}
+
+#button-compact[disabled] {
+  list-style-image: url("moz-icon://stock/gtk-clear?size=toolbar&state=disabled");
+}
+
+.delete-button {
+  list-style-image: url("moz-icon://stock/gtk-delete?size=toolbar");
+}
+
+.delete-button[disabled] {
+  list-style-image: url("moz-icon://stock/gtk-delete?size=toolbar&state=disabled");
+}
+
+#button-print {
+  list-style-image: url("moz-icon://stock/gtk-print?size=toolbar");
+}
+
+#button-print[disabled] {
+  list-style-image: url("moz-icon://stock/gtk-print?size=toolbar&state=disabled");
+}
+
+#button-stop {
+  list-style-image: url("moz-icon://stock/gtk-stop?size=toolbar");
+}
+
+#button-stop[disabled="true"] {
+  list-style-image: url("moz-icon://stock/gtk-stop?size=toolbar&state=disabled");
+}
+
+#button-file {
+  list-style-image: url("moz-icon://stock/gtk-save-as?size=toolbar");
+}
+
+#button-file[disabled] {
+  list-style-image: url("moz-icon://stock/gtk-save-as?size=toolbar&state=disabled");
+}
+
+#button-archive {
+  list-style-image: url("moz-icon://stock/mail-archive?size=toolbar");
+}
+
+#button-archive[disabled] {
+  list-style-image: url("moz-icon://stock/mail-archive?size=toolbar&state=disabled");
+}
+
+#button-goback {
+  list-style-image: url("moz-icon://stock/gtk-go-back-ltr?size=toolbar");
+}
+
+#button-goback[disabled] {
+  list-style-image: url("moz-icon://stock/gtk-go-back-ltr?size=toolbar&state=disabled");
+}
+
+#button-goback:-moz-locale-dir(rtl) {
+  list-style-image: url("moz-icon://stock/gtk-go-back-rtl?size=toolbar");
+}
+
+#button-goback:-moz-locale-dir(rtl)[disabled] {
+  list-style-image: url("moz-icon://stock/gtk-go-back-rtl?size=toolbar&state=disabled");
+}
+
+#button-goforward {
+  list-style-image: url("moz-icon://stock/gtk-go-forward-ltr?size=toolbar");
+}
+
+#button-goforward:-moz-locale-dir(rtl) {
+  list-style-image: url("moz-icon://stock/gtk-go-forward-rtl?size=toolbar");
+}
+
+#button-goforward[disabled] {
+  list-style-image: url("moz-icon://stock/gtk-go-forward-ltr?size=toolbar&state=disabled");
+}
+
+#button-goforward:-moz-locale-dir(rtl)[disabled] {
+  list-style-image: url("moz-icon://stock/gtk-go-forward-rtl?size=toolbar&state=disabled");
+}
+
+#button-chat {
+  list-style-image: url("moz-icon://stock/internet-chat?size=toolbar&state=disabled");
+}
+
+#button-chat[disabled] {
+  list-style-image: url("moz-icon://stock/internet-chat?size=toolbar");
+}
+
+#button-chat[unreadMessages="true"] {
+  font-weight: bold;
+}
+
+.badgeButton-badge {
+  padding: 0;
+}
+
+toolbar[iconsize="small"]:not([mode="text"]) .badgeButton-badge {
+  margin-bottom: 3px;
+}
+
+toolbar[iconsize="large"]:not([mode="text"]) .badgeButton-badge {
+  margin-bottom: 10px;
+}
+
+.button-appmenu {
+  list-style-image: url("moz-icon://stock/document-properties?size=toolbar");
+  min-width: 35px !important;
+}
+
+.button-appmenu[disabled] {
+  list-style-image: url("moz-icon://stock/document-properties?size=toolbar&state=disabled") !important;
+}
+
+.button-appmenu .toolbarbutton-text,
+.button-appmenu .toolbarbutton-menu-dropmarker {
+  display: none;
+}
+
+toolbar[mode="text"] .button-appmenu .toolbarbutton-icon {
+  display: -moz-box;
+}
+
+/* ::::: small primary toolbar buttons ::::: */
+
+toolbar[iconsize="small"] #button-getmsg {
+  list-style-image: url("moz-icon://stock/mail-inbox?size=toolbarsmall");
+}
+
+toolbar[iconsize="small"] #button-getmsg[disabled] {
+  list-style-image: url("moz-icon://stock/mail-inbox?size=toolbarsmall&state=disabled") !important;
+}
+
+toolbar[iconsize="small"] #button-newmsg {
+  list-style-image: url("moz-icon://stock/mail-message-new?size=toolbarsmall");
+}
+
+toolbar[iconsize="small"] #button-newmsg[disabled] {
+  list-style-image: url("moz-icon://stock/mail-message-new?size=toolbarsmall&state=disabled") !important;
+} 
+
+toolbar[iconsize="small"] #button-address {
+  list-style-image: url("moz-icon://stock/office-address-book?size=toolbarsmall");
+}
+
+toolbar[iconsize="small"] #button-address[disabled="true"] {
+  list-style-image: url("moz-icon://stock/office-address-book?size=toolbarsmall&state=disabled") !important;
+} 
+
+toolbar[iconsize="small"] #button-reply {
+  list-style-image: url("moz-icon://stock/mail-reply-sender?size=toolbarsmall");
+}
+
+toolbar[iconsize="small"] #button-reply[disabled] {
+  list-style-image: url("moz-icon://stock/mail-reply-sender?size=toolbarsmall&state=disabled") !important;
+} 
+
+toolbar[iconsize="small"] #button-replyall {
+  list-style-image: url("moz-icon://stock/mail-reply-all?size=toolbarsmall");
+}
+
+toolbar[iconsize="small"] #button-replyall[disabled] {
+  list-style-image: url("moz-icon://stock/mail-reply-all?size=toolbarsmall&state=disabled") !important;
+} 
+
+toolbar[iconsize="small"] #button-replylist {
+  list-style-image: url("moz-icon://stock/mail-reply-all?size=toolbarsmall");
+}
+
+toolbar[iconsize="small"] #button-replylist[disabled] {
+  list-style-image: url("moz-icon://stock/mail-reply-all?size=toolbarsmall&state=disabled") !important;
+}
+
+toolbar[iconsize="small"] #button-forward {
+  list-style-image: url("moz-icon://stock/mail-forward?size=toolbarsmall");
+}
+
+toolbar[iconsize="small"] #button-forward[disabled] {
+  list-style-image: url("moz-icon://stock/mail-forward?size=toolbarsmall&state=disabled") !important;
+}
+
+toolbar[iconsize="small"] .junk-button {
+  list-style-image: url("moz-icon://stock/mail-mark-junk?size=toolbarsmall");
+}
+
+toolbar[iconsize="small"] .junk-button[disabled="true"] {
+  list-style-image: url("moz-icon://stock/mail-mark-junk?size=toolbarsmall&state=disabled") !important;
+}
+
+toolbar[iconsize="small"] #button-mark {
+  list-style-image: url("moz-icon://stock/mail-mark-read?size=toolbarsmall");
+}
+
+toolbar[iconsize="small"] #button-mark[disabled] {
+  list-style-image: url("moz-icon://stock/mail-mark-read?size=toolbarsmall&state=disabled") !important;
+}
+
+toolbar[iconsize="small"] #button-nextMsg, #button-next, #button-previousMsg:-moz-locale-dir(rtl), #button-previous:-moz-locale-dir(rtl) {  
+  list-style-image: url("moz-icon://stock/gtk-go-forward-ltr?size=toolbarsmall");
+}
+
+toolbar[iconsize="small"] #button-nextMsg[disabled], #button-next[disabled], #button-previousMsg:-moz-locale-dir(rtl)[disabled], #button-previous:-moz-locale-dir(rtl)[disabled] {
+  list-style-image: url("moz-icon://stock/gtk-go-forward-ltr?size=toolbarsmall&state?disabled");
+}
+
+toolbar[iconsize="small"] #button-previousMsg, #button-previous, #button-nextMsg:-moz-locale-dir(rtl), #button-next:-moz-locale-dir(rtl) {
+  list-style-image: url("moz-icon://stock/gtk-go-back-ltr?size=toolbarsmall");
+}
+
+toolbar[iconsize="small"] #button-previousMsg[disabled], #button-previous[disabled], #button-nextMsg:-moz-locale-dir(rtl)[disabled], #button-next:-moz-locale-dir(rtl)[disabled] {
+  list-style-image: url("moz-icon://stock/gtk-go-back-ltr?size=toolbarsmall&state=disabled");
+}
+
+toolbar[iconsize="small"] #button-nextUnread {
+  list-style-image: url("moz-icon://stock/go-down?size=toolbarsmall");
+}
+
+toolbar[iconsize="small"] #button-nextUnread[disabled] {
+  list-style-image: url("moz-icon://stock/go-down?size=toolbarsmall&state=disabled");
+}
+
+toolbar[iconsize="small"] #button-previousUnread {
+  list-style-image: url("moz-icon://stock/go-up?size=toolbarsmall");
+}
+
+toolbar[iconsize="small"] #button-previousUnread[disabled] {
+  list-style-image: url("moz-icon://stock/go-up?size=toolbarsmall&state=disabled");
+}
+
+toolbar[iconsize="small"] #button-tag {
+  /** FIXME: non stock-icon **/
+  list-style-image: url("chrome://messenger/skin/icons/tag-small.svg?size=toolbarsmall");
+}
+
+toolbar[iconsize="small"] #button-tag[disabled] {
+  /** FIXME: non stock-icon **/
+  list-style-image: url("chrome://messenger/skin/icons/tag-small.svg?size=toolbarsmall&state=disabled") !important;
+}
+
+toolbar[iconsize="small"] #button-compact {
+  list-style-image: url("moz-icon://stock/gtk-clear?size=toolbarsmall");
+}
+
+toolbar[iconsize="small"] #button-compact[disabled] {
+  list-style-image: url("moz-icon://stock/gtk-clear?size=toolbarsmall&state=disabled");
+}
+
+toolbar[iconsize="small"] #button-goback {
+  list-style-image: url("moz-icon://stock/gtk-go-back-ltr?size=toolbarsmall");
+}
+
+toolbar[iconsize="small"] #button-goback[disabled] {
+  list-style-image: url("moz-icon://stock/gtk-go-back-ltr?size=toolbarsmall&state=disabled");
+}
+
+toolbar[iconsize="small"] #button-goforward {
+  list-style-image: url("moz-icon://stock/gtk-go-forward-ltr?size=toolbarsmall");
+}
+
+toolbar[iconsize="small"] #button-goforward[disabled] {
+  list-style-image: url("moz-icon://stock/gtk-go-forward-ltr?size=toolbarsmall&state=disabled");
+}
+
+toolbar[iconsize="small"] #button-print {
+  list-style-image: url("moz-icon://stock/gtk-print?size=toolbarsmall");
+}
+
+toolbar[iconsize="small"] .delete-button {
+  list-style-image: url("moz-icon://stock/gtk-delete?size=toolbarsmall");
+}
+
+toolbar[iconsize="small"] .delete-button[disabled] {
+  list-style-image: url("moz-icon://stock/gtk-delete?size=toolbarsmall&state=disabled");
+}
+
+toolbar[iconsize="small"] #button-print[disabled] {
+  list-style-image: url("moz-icon://stock/gtk-print?size=toolbarsmall&state=disabled");
+}
+
+toolbar[iconsize="small"] #button-stop {
+  list-style-image: url("moz-icon://stock/gtk-stop?size=toolbarsmall");
+}
+
+toolbar[iconsize="small"] #button-stop[disabled="true"] {
+  list-style-image: url("moz-icon://stock/gtk-stop?size=toolbarsmall&state=disabled");
+}
+
+toolbar[iconsize="small"] #button-file {
+  list-style-image: url("moz-icon://stock/gtk-save-as?size=toolbarsmall");
+}
+
+toolbar[iconsize="small"] #button-file[disabled] {
+  list-style-image: url("moz-icon://stock/gtk-save-as?size=toolbarsmall&state=disabled");
+}
+
+toolbar[iconsize="small"] #button-archive {
+  list-style-image: url("moz-icon://stock/mail-archive?size=toolbarsmall");
+}
+
+toolbar[iconsize="small"] #button-archive[disabled] {
+  list-style-image: url("moz-icon://stock/mail-archive?size=toolbarsmall&state=disabled");
+}
+
+toolbar[iconsize="small"] #button-chat {
+  list-style-image: url("moz-icon://stock/internet-chat?size=toolbarsmall&state=disabled");
+}
+
+toolbar[iconsize="small"] #button-chat[disabled] {
+  list-style-image: url("moz-icon://stock/internet-chat?size=toolbarsmall");
+}
+
+toolbar[iconsize="small"] #button-chat[unreadMessages="true"] {
+  font-weight: bold;
+}
+
+toolbar[iconsize="small"] .button-appmenu {
+  list-style-image: url("moz-icon://stock/document-properties?size=toolbarsmall");
+}
+
+toolbar[iconsize="small"] .button-appmenu[disabled] {
+  list-style-image: url("moz-icon://stock/document-properties?size=toolbarsmall&state=disabled");
+}
+
+/* ::::: end small primary toolbar buttons ::::: */
+
+#palette-box #qfb-show-filter-bar {
+  list-style-image: url("moz-icon://stock/gtk-find?size=toolbar") !important;
+}
+
+/* Force the folder location and mail view items to fit in the available width
+   in the Customize Toolbar dialog. */
+#palette-box #locationFolders,
+#palette-box #folder-location-container,
+#palette-box #viewPicker {
+  -moz-box-flex: 1;
+}
+
+/* ::::: message notification bar style rules ::::: */
+
+.msgNotificationBar {
+  background-color: InfoBackground;
+  color: InfoText;  
+  border-bottom: 1px solid ThreeDDarkShadow;
+  padding: 3px;
+}
+
+.msgNotificationBarText {
+  font-weight: bold;
+}
+
+.msgNotificaton-smallText {
+  -moz-padding-start: 10px;
+  font-size: 90%;
+}
+
+#junkBarImage {
+  list-style-image: url("moz-icon://stock/mail-mark-junk?size=toolbar");
+}
+
+#junkIcon {
+  list-style-image: url("moz-icon://stock/mail-mark-junk?size=toolbar");
+}
+
+#remoteContentImage {
+  list-style-image: url("moz-icon://stock/image-missing?size=toolbar"); 
+}
+
+#phishingBarImage {
+  list-style-image: url("chrome://messenger/skin/icons/phishing.png");
+}
+
+#mdnBarImage {
+  list-style-image: url("moz-icon://stock/gtk-dialog-question?size=toolbar");
+}
+
+/* AppMenu styling */
+
+.splitmenu-menuitem {
+  -moz-margin-end: 1px;
+  -moz-image-region: auto;
+}
+
+#appmenuSecondaryPane {
+  -moz-border-start: 1px solid ThreeDShadow;
+}
+
+.appmenuPane-spacer {
+  min-height: 1em;
+}
+
+.appmenu-edit-button {
+  -moz-image-region: auto;
+}
+
+.appmenu-edit-button[disabled="true"] {
+  opacity: .3;
+}
+
+#appmenu-cut,
+#appmenu-editmenu-cut {
+  list-style-image: url("moz-icon://stock/gtk-cut?size=menu");
+}
+
+#appmenu-copy,
+#appmenu-editmenu-copy {
+  list-style-image: url("moz-icon://stock/gtk-copy?size=menu");
+}
+
+#appmenu-paste,
+#appmenu-editmenu-paste {
+  list-style-image: url("moz-icon://stock/gtk-paste?size=menu");
+}
+
+#appmenu_print,
+#appmenu_print_popup {
+  list-style-image: url("moz-icon://stock/gtk-print?size=menu");
+}
+
+#appmenu_addons {
+  list-style-image: url("moz-icon://stock/extension?size=menu");
+}
