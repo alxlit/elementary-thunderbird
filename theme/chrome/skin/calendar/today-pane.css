@@ -241,6 +241,10 @@ agenda-allday-richlist-item {
   overflow: hidden;
 }
 
+agenda-allday-richlist-item calendar-month-day-box-item[allday="true"] .calendar-color-box {
+  box-shadow: none;
+}
+
 .agenda-container-box {
   border-bottom: 1px dotted #C0C0C0;
   -moz-margin-start: 4px;

@@ -45,7 +45,7 @@
 
 /* Core */
 calendar-category-box:not([categories]) {
-  display: none;
+    display: none;
 }
 
 .calendar-item-image {
@@ -72,12 +72,23 @@ box[anonid="daybox"] {
 
 /* Margin that allows event creation by click and drag when the time slot is
    full of events. On the right side in normal view ... */
-stack[anonid="boxstack"] > box[anonid="topbox"][orient="horizontal"] {
+.multiday-column-box-stack > .multiday-column-top-box[orient="horizontal"] {
     -moz-margin-end: 5px;
 }
 /* ... and on bottom in rotate view. */
-stack[anonid="boxstack"] > box[anonid="topbox"][orient="vertical"] {
+.multiday-column-box-stack > .multiday-column-top-box[orient="vertical"] {
     margin-bottom: 5px;
+}
+
+/* .. and on the right side in the header container in normal view */
+calendar-header-container:not([rotated]) {
+    padding-right: 6px;
+    padding-left: 1px;
+}
+/* ... and on the bottom in rotated view. */
+calendar-header-container[rotated] {
+    padding-top: 1px;
+    padding-bottom: 5px;
 }
 
 calendar-event-column {
@@ -278,6 +289,8 @@ calendar-header-container[weekend="true"][selected="true"],
 }
 
 .calendar-color-box {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 2px !important;
     opacity: 0.8;
 }
 
@@ -290,7 +303,7 @@ calendar-event-box {
 }
 
 calendar-event-box .calendar-color-box {
-    border-radius: 5px;
+    background-image: -moz-linear-gradient(center top , rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.0));
 }
 
 calendar-event-box[selected="true"] {
@@ -432,7 +445,6 @@ calendar-multiweek-view {
 
 calendar-month-view grid,
 calendar-multiweek-view grid {
-/*    overflow: -moz-scrollbars-vertical;*/
     overflow: hidden;
 }
 
@@ -525,13 +537,17 @@ calendar-month-day-box-item {
     padding: 0px 1px;
 }
 
-calendar-month-day-box-item .calendar-color-box {
-    border-radius: 3px;
+calendar-month-day-box-item[allday="true"] .calendar-color-box {
+    box-shadow: -1px -1px 0px rgba(255, 255, 255, 0.7) inset, 1px 1px 0px rgba(255, 255, 255, 0.7) inset;
 }
 
 calendar-month-day-box-item[selected="true"] .calendar-color-box {
     color: #000000 !important;
     background-color: #ffdb67 !important;
+}
+
+calendar-month-day-box calendar-month-day-box-item[allday="true"] .calendar-color-box {
+    border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .calendar-color-box {
@@ -570,7 +586,9 @@ calendar-editable-item[selected="true"] .calendar-event-selection {
 }
 
 .calendar-category-box-gradient {
-    list-style-image: url("chrome://calendar/skin/category-overlay.png");
+    width: 5px;
+    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.38), transparent) !important;
+    border-left: 1px solid rgba(255, 255, 255, 0.38);
 }
 
 calendar-event-gripbar {
