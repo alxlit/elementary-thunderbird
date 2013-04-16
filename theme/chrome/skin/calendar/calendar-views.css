@@ -651,6 +651,43 @@ calendar-event-box[readonly="true"]:hover .calendar-event-box-grippy-bottom {
     cursor: auto;
 }
 
+/* timeindicator */
+.timeIndicator[orient="vertical"] {
+    min-width: 1px;
+    -moz-margin-start: -1px;
+    -moz-margin-end: -1px;
+    border-top: 2px solid red;
+    opacity: 0.7;
+}
+
+.timeIndicator[orient="horizontal"] {
+    min-height: 1px;
+    margin-top: -1px;
+    margin-bottom: -1px;
+    border-left: 2px solid red;
+    opacity: 0.7;
+}
+
+.timeIndicator-timeBar {
+    background-color: red;
+    position: absolute;
+    border-radius: 2px;
+}
+
+.timeIndicator-timeBar[orient="vertical"] {
+    margin-top: -1px;
+    height: 4px;
+    width: 8px;
+    right: 0px;
+}
+
+.timeIndicator-timeBar[orient="horizontal"] {
+    margin-left: -1px;
+    height: 8px;
+    width: 4px;
+    bottom: 0px;
+}
+
 /* tooltips */
 vbox.tooltipBox {
     max-width: 40em;
