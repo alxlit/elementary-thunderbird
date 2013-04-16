@@ -1,36 +1,33 @@
 
 # elementary Thunderbird
 
-A theme for Thunderbird 17 that integrates with [elementary's](http://elementaryos.org)
-GTK theme. This version is based on [Alex Little's work](https://github.com/alxlit/elementary-thunderbird/).
-It adds support for Lightning and the addressbook and reuses icons from the current active 
-gtk theme.
+A theme for Thunderbird 17 that integrates with
+[elementary's](http://elementaryos.org) GTK theme.
 
-  * Installation: Download [elementary-thunderbird.xpi](https://github.com/ksmolder/elementary-thunderbird/blob/master/elementary-thunderbird.xpi) and drag it to the addons tab in Thunderbird.
+  * Installation:
+    [addons.mozilla.org](https://addons.mozilla.org/en-US/thunderbird/addon/elementary-thunderbird/)
+    or follow the instructions below to get the latest development version
+  * Requirements: Linux, with elementary GTK installed
   * License: [GNU GPL v2.0](https://www.gnu.org/licenses/gpl-2.0)
 
 ## Development
 
-I am **not** affiliated with the elementary development team, and this theme is **not**
-officially supported. Please submit bug reports and fixes [here](http://github.com/alxlit/elementary-thunderbird/issues)
-(on GitHub). To install the theme locally, clone the repository and follow the instructions
+The developers of this theme are **not** affiliated with the elementary
+development team, and this theme is **not** officially supported. Please submit
+bug reports and fixes
+[here](http://github.com/alxlit/elementary-thunderbird/issues) (on GitHub). To
+install the theme locally, clone the repository and follow the instructions
 [here](https://developer.mozilla.org/en-US/docs/Building_a_Theme#Test).
 
 ### Theme
 
-The elementary-theme uses native icons from the elementary-icon package as much as possible. Therefore, the theme is only installable on Linux systems and requires the elementary-icon set to be activated.
-
-## Todo
-  * Fix bugs :-)
-
-## Known bugs
-  * Tabs are too wide and icons and close button should be reversed
-  * Still using some legacy icons
-  * When the theme is activated, the horizontal scrollbar is always shown in the threadpane (message list window). This can be resolved for now by dragging the last column header (e.g. Date column) completely to the right ('after' the column selector icon). The same behaviour is noted for the task/ todo list in the today panel. The above mentioned fix does not work here however. I'm not yet sure what causes this strange behaviour, but for some reason the width of the last column is calculated almost 50 pixels to wide...
+The elementary-theme uses native icons from the elementary-icon package as much
+as possible. Therefore, the theme is only installable on Linux systems and
+requires the elementary-icon set to be activated.
 
 ## Preview
 
-![screenshot](https://github.com/ksmolder/elementary-thunderbird/blob/master/screenshots/1.png)
+![screenshot](https://raw.github.com/alxlit/elementary-thunderbird/master/screenshots/1.png)
 
 ## See Also
 
