@@ -306,8 +306,8 @@ agenda-allday-richlist-item calendar-month-day-box-item[allday="true"] .calendar
 }
 
 .agenda-calendar-image {
-  list-style-image: url("chrome://calendar/skin/calendar-overlay.png");
-  -moz-image-region: rect(0px 10px 10px 0px);
+/*  list-style-image: url("chrome://calendar/skin/calendar-overlay.png");
+  -moz-image-region: rect(0px 10px 10px 0px);*/
   margin-top: 3px;
   -moz-margin-start: 4px;
   width: 10px;
