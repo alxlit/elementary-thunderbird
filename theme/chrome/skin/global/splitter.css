@@ -46,6 +46,17 @@ splitter[state="collapsed"]:hover:-moz-locale-dir(rtl) {
   border-right: 4px solid highlight;
 }
 
+tree splitter {
+  -moz-appearance: splitter;
+  -moz-box-align: center;
+  -moz-box-pack: center;
+  cursor: ew-resize;
+  margin: 0;
+  position: static
+  width: auto;
+  z-index: auto;
+}
+
 splitter[state="collapsed"][collapse="before"],
 splitter[state="collapsed"][substate="before"],
 splitter[state="collapsed"][collapse="after"]:-moz-locale-dir(rtl),
@@ -78,6 +89,17 @@ splitter[orient="vertical"] {
   -moz-transition: border-width .3s ease-in;
   -moz-box-align: center;
   -moz-box-pack: center;
+}
+
+tree splitter[orient="vertical"] {
+  -moz-appearance: splitter;
+  -moz-box-align: center;
+  -moz-box-pack: center;
+  cursor: ns-resize;
+  height: auto;
+  margin: 0;
+  position: static
+  z-index: auto;
 }
 
 splitter[orient="vertical"][state="collapsed"][collapse="before"],
