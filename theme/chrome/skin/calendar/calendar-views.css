@@ -565,7 +565,7 @@ calendar-month-day-box calendar-month-day-box-item[allday="true"] .calendar-colo
 }
 
 .labeldaybox-container {
-    border-top: 1px solid #D2D2D2;
+/*    border-top: 1px solid #D2D2D2;*/
 }
 
 calendar-editable-item[selected="true"] .calendar-event-selection {
