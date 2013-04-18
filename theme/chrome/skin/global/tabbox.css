@@ -51,7 +51,6 @@ tab {
 tab[selected="true"] {
   z-index: 1;
   margin-top: 0;
-/*ksmolder  margin-bottom: -1px;*/
   margin-bottom: -1px;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;

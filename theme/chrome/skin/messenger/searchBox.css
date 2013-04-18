@@ -9,7 +9,7 @@
 }
 
 .gloda-search-icon {
-  list-style-image: url(moz-icon://stock/gtk-find?size=menu);
+  list-style-image: url(moz-icon://stock/edit-find?size=menu);
 }
 
 .gloda-search-icon:-moz-locale-dir(rtl) {

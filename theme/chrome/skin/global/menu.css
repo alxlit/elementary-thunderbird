@@ -199,6 +199,6 @@ menulist > menupopup > menuseparator,
 
 .treecell-popupcell-menu {
   -moz-margin-start: -2px;
-  list-style-image: url("chrome://global/skin/columnselect.gif");
+  list-style-image: url("chrome://global/skin/icons/columnpicker.svg");
   -moz-image-region: auto;
 }

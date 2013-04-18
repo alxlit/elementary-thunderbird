@@ -90,11 +90,5 @@ checkbox:hover:active > .checkbox-spacer-box > .checkbox-check {
 /* ..... checked state ..... */
 
 checkbox[checked="true"] > .checkbox-spacer-box > .checkbox-check {
-/*  background-image: url("chrome://global/skin/checkbox/cbox-check.gif");*/
   -moz-appearance: checkmenuitem;
 }
-/*
-checkbox[checked="true"][disabled="true"] > .checkbox-spacer-box > .checkbox-check {
-  background-image: url("chrome://global/skin/checkbox/cbox-check-dis.gif") !important
-}*/
-

@@ -40,19 +40,19 @@ notification[type="critical"] {
 /* Default icons for notifications */
 
 .messageImage[type="info"] {
-  list-style-image: url("moz-icon://stock/gtk-dialog-info?size=menu");
+  list-style-image: url("moz-icon://stock/dialog-information?size=menu");
 }
 
 .messageImage[type="warning"] {
-  list-style-image: url("moz-icon://stock/gtk-dialog-warning?size=menu");
+  list-style-image: url("moz-icon://stock/dialog-warning?size=menu");
 }
 
 .messageImage[type="critical"] {
-  list-style-image: url("moz-icon://stock/gtk-dialog-error?size=menu");
+  list-style-image: url("moz-icon://stock/dialog-error?size=menu");
 }
 
 .messageCloseButton {
-  list-style-image: url("moz-icon://stock/gtk-close?size=menu");
+  list-style-image: url("moz-icon://stock/window-close?size=menu");
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -68,5 +68,5 @@ notification[type="critical"] {
 }
 
 .popup-notification-closeitem {
-  list-style-image: url("moz-icon://stock/gtk-close?size=menu");
+  list-style-image: url("moz-icon://stock/window-close?size=menu");
 }

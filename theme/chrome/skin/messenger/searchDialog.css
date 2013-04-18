@@ -82,7 +82,7 @@ treechildren::-moz-tree-cell-text(container, closed, hasUnread, read) {
 /* ..... column picker ..... */
 
 .tree-columnpicker-icon  {
-  list-style-image: url("chrome://messenger/skin/icons/columnpicker.svg");
+  list-style-image: url("chrome://global/skin/icons/columnpicker.svg");
 }
 
 /* ..... thread column ..... */

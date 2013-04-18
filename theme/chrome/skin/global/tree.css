@@ -11,7 +11,6 @@
 /* ::::: tree ::::: */
 
 tree {
-  margin: 0px 4px;
   margin: 0px;
   border: 2px solid;
   -moz-border-top-colors: ThreeDShadow ThreeDDarkShadow;
@@ -33,7 +32,6 @@ tree {
   border: 1px solid #000000;
 }
 
-
 /* ::::: tree rows ::::: */
 
 treechildren::-moz-tree-row {
@@ -51,7 +49,6 @@ treechildren:not(.autocomplete-treebody)::-moz-tree-row(multicol, odd) {
 
 treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected) {
   background-color: -moz-cellhighlight;
-  /* background-color: #4a90d9; */
 }
 
 treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected, focus) {
@@ -309,7 +306,7 @@ treechildren::-moz-tree-column(insertafter) {
 /* ::::: column picker :::::  */
 
 .tree-columnpicker-icon {
-  list-style-image: url("chrome://global/skin/tree/columnpicker.svg");
+  list-style-image: url("chrome://global/skin/icons/columnpicker.svg");
 }
 
 /* ::::: twisty :::::  */
