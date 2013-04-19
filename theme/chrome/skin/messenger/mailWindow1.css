@@ -26,23 +26,32 @@
   background-color: #dedede;
 }
 
+#folderTree treechildren::-moz-tree-row {
+  min-height: 27px !important;
+}
+
+#folderTree treechildren::-moz-tree-cell-text {
+  color: #6f6f6f;
+}
+
 #folderTree treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover) {
   background-color: #f5f5f5;
 }
 
 #folderTree treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected) {
-  /* background-color: -moz-cellhighlight; */
+  background-image: -moz-linear-gradient(#c6c6c6, #cecece);
 
   border: 2px solid;
   border-left: none;
   border-right: none;
 
-  -moz-border-top-colors: #5296de #91c1f3;
-  -moz-border-bottom-colors: #377fc9 #5b9adc;
+  -moz-border-top-colors: #a7a7a7 #c1c1c1;
+  -moz-border-bottom-colors: #e7e7e7 #bcbcbc;
 
-  background-image: linear-gradient(#74b0ee, #4c91da) !important;
+  min-height: 23px !important;
+}
 
-  min-height: 18px;
+#folderTree treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected) {
 }
 
 #folderTree scrollbar {

@@ -36,7 +36,7 @@ tree {
 
 treechildren::-moz-tree-row {
   border: 1px solid transparent;
-  min-height: 22px !important;
+  min-height: 22px /* !important */;
   height: auto !important;
 
   /* padding here doesn't add to height, due to whatever the container is... */
