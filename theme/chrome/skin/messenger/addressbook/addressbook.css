@@ -67,56 +67,56 @@
 
 toolbar[iconsize="small"] > #button-newcard,
 toolbar[iconsize="small"] > toolbarpaletteitem > #button-newcard {
-  list-style-image: url("moz-icon://stock/contact-new?size=toolbarsmall");
+  list-style-image: url("moz-icon://stock/contact-new?size=menu");
 }
 
 toolbar[iconsize="small"] > #button-newcard[disabled] {
-  list-style-image: url("moz-icon://stock/contact-new?size=toolbarsmall&state=disabled") !important;
+  list-style-image: url("moz-icon://stock/contact-new?size=menu&state=disabled") !important;
 }
 
 toolbar[iconsize="small"] > #button-newlist,
 toolbar[iconsize="small"] > toolbarpaletteitem > #button-newlist {
-  list-style-image: url("moz-icon://stock/address-book-new?size=toolbarsmall");
+  list-style-image: url("moz-icon://stock/address-book-new?size=menu");
 }
 
 toolbar[iconsize="small"] > #button-newlist[disabled] {
-  list-style-image: url("moz-icon://stock/address-book-new?size=toolbarsmall&state=disabled") !important;
+  list-style-image: url("moz-icon://stock/address-book-new?size=menu&state=disabled") !important;
 }
 
 toolbar[iconsize="small"] > #button-editcard,
 toolbar[iconsize="small"] > toolbarpaletteitem > #button-editcard {
-  list-style-image: url("moz-icon://stock/edit?size=toolbarsmall");
+  list-style-image: url("moz-icon://stock/edit?size=menu");
 }
 
 toolbar[iconsize="small"] > #button-editcard[disabled] {
-  list-style-image: url("moz-icon://stock/edit?size=toolbarsmall&state=disabled") !important;
+  list-style-image: url("moz-icon://stock/edit?size=menu&state=disabled") !important;
 }
 
 toolbar[iconsize="small"] > #button-newmessage,
 toolbar[iconsize="small"] > toolbarpaletteitem > #button-newmessage {
-  list-style-image: url("moz-icon://stock/mail-message-new?size=toolbarsmall");
+  list-style-image: url("moz-icon://stock/mail-message-new?size=menu");
 }
 
 toolbar[iconsize="small"] > #button-newmessage[disabled] {
-  list-style-image: url("moz-icon://stock/mail-message-new?size=toolbarsmall?size=toolbarsmall&state=disabled") !important;
+  list-style-image: url("moz-icon://stock/mail-message-new?size=menu?size=menu&state=disabled") !important;
 }
 
 toolbar[iconsize="small"] > #button-newim,
 toolbar[iconsize="small"] > toolbarpaletteitem > #button-newim {
-  list-style-image: url("moz-icon://stock/im-message-new?size=toolbarsmall");
+  list-style-image: url("moz-icon://stock/im-message-new?size=menu");
 }
 
 toolbar[iconsize="small"] > #button-newim[disabled] {
-  list-style-image: url("moz-icon://stock/im-message-new?size=toolbarsmall&state=disabled") !important;
+  list-style-image: url("moz-icon://stock/im-message-new?size=menu&state=disabled") !important;
 }
 
 toolbar[iconsize="small"] > #button-abdelete,
 toolbar[iconsize="small"] > toolbarpaletteitem > #button-abdelete {
-  list-style-image: url("moz-icon://stock/edit-delete?size=toolbarsmall");
+  list-style-image: url("moz-icon://stock/edit-delete?size=menu");
 }
 
 toolbar[iconsize="small"] > #button-abdelete[disabled] {
-  list-style-image: url("moz-icon://stock/edit-delete?size=toolbarsmall&state=disabled") !important;
+  list-style-image: url("moz-icon://stock/edit-delete?size=menu&state=disabled") !important;
 }
 
 /* CardView styles - used in the Card View Pane */

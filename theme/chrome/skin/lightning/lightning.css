@@ -93,26 +93,26 @@ radio[pane=paneLightning] {
 
 /* Write button */
 #newMsgButton-mail-menuitem {
-  list-style-image: url("moz-icon://stock/mail-message-new?size=toolbarsmall");
+  list-style-image: url("moz-icon://stock/mail-message-new?size=menu");
 }
 
 #newMsgButton-mail-menuitem[disabled] {
-  list-style-image: url("moz-icon://stock/mail-message-new?size=toolbarsmall&state=disabled") !important;
+  list-style-image: url("moz-icon://stock/mail-message-new?size=menu&state=disabled") !important;
 }
 
 #newMsgButton-calendar-menuitem {
-  list-style-image: url("moz-icon://stock/event-new?size=toolbarsmall");
+  list-style-image: url("moz-icon://stock/event-new?size=menu");
 }
 
 #newMsgButton-calendar-menuitem[disabled] {
-  list-style-image: url("moz-icon://stock/event-new?size=toolbarsmall&state=disabled") !important;
+  list-style-image: url("moz-icon://stock/event-new?size=menu&state=disabled") !important;
 }
 
 #newMsgButton-task-menuitem {
-  list-style-image: url("chrome://lightning/skin/icons/task-new-small.svg?size=toolbarsmall");
+  list-style-image: url("chrome://lightning/skin/icons/task-new-small.svg?size=menu");
 }
 #newMsgButton-task-menuitem[disabled] {
-  list-style-image: url("chrome://lightning/skin/icons/task-new-small.svg?size=toolbarsmall&state=disabled") !important;
+  list-style-image: url("chrome://lightning/skin/icons/task-new-small.svg?size=menu&state=disabled") !important;
 }
 
 /* Today pane button in status bar */
@@ -135,7 +135,7 @@ radio[pane=paneLightning] {
 }
 
 #calendar-status-todaypane-button > stack> .toolbarbutton-icon-begin {
-  list-style-image: url("chrome://lightning/skin/icons/calendar.svg?size=toolbarsmall");
+  list-style-image: url("chrome://lightning/skin/icons/calendar.svg?size=menu");
 }
 
 #calendar-status-todaypane-button > stack > .toolbarbutton-day-text {
