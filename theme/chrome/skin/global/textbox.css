@@ -30,11 +30,12 @@ textbox {
 }
 
 textbox[focused="true"]:not([readonly="true"]):not([disabled="true"]) {
-  border: 1px solid #689cd3 !important;
-  -moz-border-top-colors: #679fd9 !important;
-  -moz-border-left-colors: #679ed6 !important;
-  -moz-border-right-colors: #679ed6 !important ;
-  box-shadow: 0 1px 0 rgba(255,255,255,0.34), inset 0 0 0 1px rgba(170,187,204,.5) !important;
+  border: 1px solid #3973AF !important;
+  -moz-border-top-colors: #39638E !important;
+  -moz-border-left-colors: #39638E #3973AF !important;
+  -moz-border-right-colors: #39638E #3973AF !important;
+  -moz-border-bottom-colors: #3973AF !important;
+  box-shadow: inset 0 0 0 1px #9cc0e5 !important;
 }
 
 textbox[multiline="true"] {
