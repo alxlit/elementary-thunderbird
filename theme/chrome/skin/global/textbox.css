@@ -12,21 +12,54 @@
 /* ::::: textbox ::::: */
 
 textbox {
-  -moz-appearance: textfield;
-  cursor: text;
-  margin: 2px 4px;
-  border: 2px solid;
-  -moz-border-top-colors: ThreeDShadow ThreeDDarkShadow;
-  -moz-border-right-colors: ThreeDHighlight ThreeDLightShadow;
-  -moz-border-bottom-colors: ThreeDHighlight ThreeDLightShadow;
-  -moz-border-left-colors: ThreeDShadow ThreeDDarkShadow;
-  padding: 2px 2px 3px;
-  -moz-padding-start: 4px;
-  background-color: -moz-Field;
-  color: -moz-FieldText;
+  -moz-appearance: none;
+  border: 1px solid #9b9b9b !important;
+  border-radius: 2.5px !important;
+  -moz-border-top-colors: #8e8e8e !important;
+  -moz-border-left-colors: #949494 !important;
+  -moz-border-right-colors: #949494 !important;
+  height: 25px;
+  min-height: 25px;
+  margin: 6px 6px 6px 6px !important;
+  padding-left: 3px;
+  padding-right: 3px;
+  background-image: -moz-linear-gradient(#DFDFDF 1px, #EFEFEF 3px, #FDFDFD 84%) !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.34), inset 1px 1px 0 0 rgba(0,0,0,0.1),
+              inset -1px 0px 0 0 rgba(0,0,0,0.1) !important;
+  -moz-box-align: stretch;
 }
 
-html|*.textbox-input, 
+textbox[focused="true"]:not([readonly="true"]):not([disabled="true"]) {
+  border: 1px solid #689cd3 !important;
+  -moz-border-top-colors: #679fd9 !important;
+  -moz-border-left-colors: #679ed6 !important;
+  -moz-border-right-colors: #679ed6 !important ;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.34), inset 0 0 0 1px rgba(170,187,204,.5) !important;
+}
+
+textbox[multiline="true"] {
+  padding-top: 4px !important;
+}
+
+/* This is rather hacky b/c its overriding !important */
+#addressingWidget > listitem > listcell > textbox {
+  -moz-appearance: none;
+  background: -moz-Field !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: -moz-FieldText;
+  margin: 2px 4px !important;
+  padding: 2px 2px 3px;
+  -moz-padding-start: 4px;
+}
+
+#addressingWidget > listitem > listcell > textbox[focused="true"] {
+  -moz-appearance: none;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+html|*.textbox-input,
 html|*.textbox-textarea {
   margin: 0px !important;
   border: none !important;
