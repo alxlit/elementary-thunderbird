@@ -214,6 +214,21 @@ treecols:-moz-lwtheme {
 }
 
 #dirTree {
-	background-color: #dedede;
-	border-bottom: 1px solid ThreeDShadow;
+  background-color: #dedede;
+  border-bottom: 1px solid ThreeDShadow;
+  color: #6F6F6F !important;
+}
+
+#dirTree treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected) {
+  border-top: 1px solid #b5b5b5 !important;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #c1c1c1 !important;
+  background-color: #dedede;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.11) 0%, rgba(0, 0, 0, 0.07) 100%) !important;
+  min-height: 18px;
+}
+
+#dirTree treechildren::-moz-tree-cell-text(selected) {
+  color: #6F6F6F !important;
 }
