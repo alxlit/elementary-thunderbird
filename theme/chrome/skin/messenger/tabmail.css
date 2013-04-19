@@ -9,9 +9,11 @@
 #tabs-toolbar {
   background-image: -moz-linear-gradient(top, #9f9f9f, #b1b1b1 5px);
   border: 1px solid #7c7c7c;
+  border-top-width: 4px;
+  -moz-border-top-colors: #dedede #dedede #dedede #7c7c7c;
   border-left: none;
   border-right: none;
-  height: 27px;
+  height: 30px;
   padding: 0;
 }
 
