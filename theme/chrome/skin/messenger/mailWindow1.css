@@ -338,15 +338,20 @@ treechildren::-moz-tree-cell-text(subjectCol) {
 
 /* ..... message pane adjustments ..... */
 
+#threadpane-splitter, #today-splitter {
+  border-left-color: #777 !important;
+}
+
 #messagepaneboxwrapper {
-  background: #ccc;
+  /* background: #ccc; */
+  background-image: -moz-linear-gradient(top, #aaaaaa, #bdbdbd 12px, #c6c6c6 24px);
   padding: 15px;
 }
 
 /* #messagepanebox */
 #messagepaneboxwrapper > vbox {
-  border: 1px solid #999;
-  box-shadow: 0 0 10px #adadad;
+  border: 1px solid #777;
+  box-shadow: 0 4px 8px #999;
 }
 
 /* #singlemessage */
