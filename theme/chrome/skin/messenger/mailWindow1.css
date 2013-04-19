@@ -323,14 +323,25 @@ treechildren::-moz-tree-cell-text(subjectCol) {
 
 /* ..... tree adjustments ..... */
 
-#accountCentralBox { 
+#accountCentralBox {
   border-bottom: 1px solid ThreeDShadow;
 }
 
 /* ..... message pane adjustments ..... */
 
-#messagepanebox {
-  border-bottom: 1px solid ThreeDShadow;
+#messagepaneboxwrapper {
+  background: #ccc;
+  padding: 15px;
+}
+
+/* #messagepanebox */
+#messagepaneboxwrapper > vbox {
+  border: 1px solid #999;
+  box-shadow: 0 0 10px #adadad;
+}
+
+/* #singlemessage */
+#messagepaneboxwrapper > vbox > vbox {
 }
 
 /* ..... status bar adjustments ..... */
