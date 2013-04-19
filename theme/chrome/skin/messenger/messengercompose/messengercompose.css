@@ -95,27 +95,27 @@ toolbox[labelalign="end"] > toolbar[mode="full"] deck .toolbarbutton-text {
 }
 
 #cut-button {
-  list-style-image: url("moz-icon://stock/gtk-cut?size=toolbar");
+  list-style-image: url("moz-icon://stock/edit-cut?size=toolbar");
 }
 
 #cut-button[disabled="true"] {
-  list-style-image: url("moz-icon://stock/gtk-cut?size=toolbar&state=disabled");
+  list-style-image: url("moz-icon://stock/edit-cut?size=toolbar&state=disabled");
 }
 
 #copy-button {
-  list-style-image: url("moz-icon://stock/gtk-copy?size=toolbar");
+  list-style-image: url("moz-icon://stock/edit-copy?size=toolbar");
 }
 
 #copy-button[disabled="true"] {
-  list-style-image: url("moz-icon://stock/gtk-copy?size=toolbar&state=disabled");
+  list-style-image: url("moz-icon://stock/edit-copy?size=toolbar&state=disabled");
 }
 
 #paste-button {
-  list-style-image: url("moz-icon://stock/gtk-paste?size=toolbar");
+  list-style-image: url("moz-icon://stock/edit-paste?size=toolbar");
 }
 
 #paste-button[disabled="true"] {
-  list-style-image: url("moz-icon://stock/gtk-paste?size=toolbar&state=disabled");
+  list-style-image: url("moz-icon://stock/edit-paste?size=toolbar&state=disabled");
 }
 
 /* ::::: small primary toolbar buttons ::::: */
@@ -141,7 +141,7 @@ toolbar[iconsize="small"] #spellingButton {
 }
 
 toolbar[iconsize="small"] #spellingButton[disabled="true"] {
-  list-style-image: url("moz-icon://stock/gtk-spell-check?size=menu&state=disabled");
+  list-style-image: url("moz-icon://stock/gtk-spell-check?size=menu&state=disabled") !important;
 }
 
 toolbar[iconsize="small"] #button-attach {
@@ -171,27 +171,27 @@ toolbar[iconsize="small"] #quoteButton[disabled="true"] {
 }
 
 toolbar[iconsize="small"] #cut-button {
-  list-style-image: url("moz-icon://stock/gtk-cut?size=menu");
+  list-style-image: url("moz-icon://stock/edit-cut?size=menu");
 }
 
 toolbar[iconsize="small"] #cut-button[disabled="true"] {
-  list-style-image: url("moz-icon://stock/gtk-cut?size=menu&state=disabled");
+  list-style-image: url("moz-icon://stock/edit-cut?size=menu&state=disabled");
 }
 
 toolbar[iconsize="small"] #copy-button {
-  list-style-image: url("moz-icon://stock/gtk-copy?size=menu");
+  list-style-image: url("moz-icon://stock/edit-copy?size=menu");
 }
 
 toolbar[iconsize="small"] #copy-button[disabled="true"] {
-  list-style-image: url("moz-icon://stock/gtk-copy?size=menu&state=disabled");
+  list-style-image: url("moz-icon://stock/edit-copy?size=menu&state=disabled");
 }
 
 toolbar[iconsize="small"] #paste-button {
-  list-style-image: url("moz-icon://stock/gtk-paste?size=menu");
+  list-style-image: url("moz-icon://stock/edit-paste?size=menu");
 }
 
 toolbar[iconsize="small"] #paste-button[disabled="true"] {
-  list-style-image: url("moz-icon://stock/gtk-paste?size=menu&state=disabled");
+  list-style-image: url("moz-icon://stock/edit-paste?size=menu&state=disabled");
 }
 
 #priority-button:not(:-moz-lwtheme) > label {
