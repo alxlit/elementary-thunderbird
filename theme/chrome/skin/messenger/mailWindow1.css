@@ -58,19 +58,6 @@
   color: #6F6F6F !important;
 }
 
-#folderTree scrollbar {
-  -moz-appearance: none;
-  display: none;
-}
-
-#folderTree:hover scrollbar {
-  display: inline !important;
-}
-
-#folderTree scrollbar slider {
-  background-color: #dedede !important;
-}
-
 #threadTree {
   border-bottom: 1px solid ThreeDShadow;
 }
