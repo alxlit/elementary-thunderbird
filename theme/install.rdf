@@ -4,7 +4,7 @@
   <Description about="urn:mozilla:install-manifest">
     <em:type>4</em:type> <!-- 4 : Theme -->
     <em:id>elementary-thunderbird@alxlit.addons.mozilla.org</em:id>
-    <em:version>0.3.1</em:version>
+    <em:version>0.3.2</em:version>
     <em:targetPlatform>Linux</em:targetPlatform>
     <em:name>elementary Thunderbird</em:name>
     <em:description>Thunderbird for elementary OS</em:description>
