@@ -27,6 +27,14 @@
   color: #6F6F6F;
 }
 
+#folderTree treechildren::-moz-tree-row(odd) {
+  background-color: #dedede !important;
+}
+
+#folderTree treechildren::-moz-tree-row(even) {
+  background-color: #dedede !important;
+}
+
 #folderTree treechildren::-moz-tree-row {
   min-height: 27px;
 }
